@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+::root {
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: var(--body), Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  --primary-font: 'Anton', sans-serif;
+  --secondary-font: 'Dancing Script', cursive;
+  --grey: rgb(107, 97, 97);
+  --red: rgb(216, 58, 52);
+  background-color: #eee;
+}
+
+*,
+*::before,
+*::after {
+  font-family: var(--primary-font);
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: .9rem;
+  height: .9rem;
+}
+
+::-webkit-scrollbar {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: silver;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+h2 {
+  color: #0F0E0E;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: white;
+  background-color: rgba(12, 8, 39, 0.877);
+}
+
+/* Determine what sections need section__padding and section__margin */
+.section__padding {
+  padding: 5rem 12rem;
+}
+
+.section__margin {
+  margin: 5rem 12rem;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Make an ellipses that truncates overflow for blog preview */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate-lineclamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.padding {
+  padding-right: 10rem;
+  padding-left: 10rem;
+}
+
+.margin {
+  margin-right: 10rem;
+  margin-left: 10rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .padding {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .margin {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .padding {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .margin {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .padding {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .margin {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 }
