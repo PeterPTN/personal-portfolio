@@ -379,7 +379,7 @@ Hero
     .portfolio__hero-main-tag-container {
         flex-direction: column;
         align-self: center;
-        margin: 3rem 5rem;
+        margin: 3rem 0rem;
         font-size: 1.1rem;
     }
 
@@ -396,18 +396,19 @@ Hero
     .portfolio__hero-main-tag-container>h2 {
         order: 1;
         font-size: 2em;
-        padding: 0 3rem .5rem;
+        padding: 0 2rem .5rem;
         color: rgb(192, 137, 146);
         border-bottom: 2px solid rgb(192, 192, 192);
         letter-spacing: 1px;
         text-transform: capitalize;
+        text-align: center;
     }
 }
 
 
 @media screen and (max-width: 450px) {
     .portfolio__hero-display-container {
-        height: 500px;
+        height: 550px;
     }
 
     .portfolio__hero-display-peter>h1 {
@@ -419,17 +420,18 @@ Hero
     .portfolio__hero-display-peter>h1::after {
         content: "Nguyen";
         display: block;
-        color: rgb(139, 139, 139);
+        color: #eee;
         position: absolute;
         top: 5rem;
     }
 
     .portfolio__hero-main-tag-container {
         font-size: .9rem;
+        margin-top: 2rem;
     }
 
     .portfolio__hero-main-tag-container>h2 {
-        font-size: 1.75em;
+        font-size: 1.5em;
         padding: 0 1rem .5rem;
     }
 
