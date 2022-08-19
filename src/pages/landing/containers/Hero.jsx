@@ -27,7 +27,7 @@ const Hero = () => {
                     </div>
 
                     <div className="portfolio__hero-display-phong-thanh">
-                        <h2 className="phong">Phòng</h2>
+                        <h2 className="phong">hòng</h2>
                         <h2 className="thanh">Thành</h2>
 
                     </div>

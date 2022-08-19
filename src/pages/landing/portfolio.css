@@ -67,21 +67,53 @@ Hero
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    animation: flicker 9s infinite;
+    animation-fill-mode: backwards;
 }
 
-.portfolio__hero-display-phong-thanh>h2 {
+
+
+.portfolio__hero-display-phong-thanh>h2,
+.thanh>h2 {
     text-align: center;
     font-size: 5rem;
     /*transform: skewX(-15deg);*/
     font-family: var(--secondary-font);
     transform: skewX(-20deg);
-    color: rgb(211, 124, 9);
+    color: rgb(214, 150, 31);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: rgb(211, 124, 9);
-    text-shadow: 0px 0px 1rem rgb(110, 96, 15);
+    background-color: rgb(194, 115, 12);
+    text-shadow: 0px 0px .75rem rgb(175, 132, 15), 0px 0px 2rem rgb(20, 18, 18);
+}
+
+@keyframes flicker {
+
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
+
+.phong::before {
+    content: "P";
+    font-family: var(--secondary-font);
+    animation: flicker 2s infinite;
 }
 
 .phong {
@@ -91,6 +123,7 @@ Hero
 .thanh {
     margin-right: 3rem;
 }
+
 
 .portfolio__hero-display-nguyen {
     flex: 1.5;
@@ -988,6 +1021,7 @@ PROJECTS
 }
 
 @media screen and (max-width: 1650px) {
+
     /* Popular */
     .--film-zero {
         right: 10rem;
