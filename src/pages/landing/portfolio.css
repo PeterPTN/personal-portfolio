@@ -428,6 +428,7 @@ Hero
     .portfolio__hero-main-tag-container {
         font-size: .9rem;
         margin-top: 2rem;
+        margin-bottom: 0;
     }
 
     .portfolio__hero-main-tag-container>h2 {
