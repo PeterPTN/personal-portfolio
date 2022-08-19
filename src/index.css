@@ -1,4 +1,4 @@
-::root {
+:root {
   box-sizing: border-box;
   font-size: 1rem;
   font-family: var(--body), Arial, Helvetica, sans-serif;
@@ -8,9 +8,23 @@ html {
   --primary-font: 'Anton', sans-serif;
   --secondary-font: 'Dancing Script', cursive;
   --grey: rgb(107, 97, 97);
+  --lightgrey: rgb(206, 199, 199);
+  --darkgrey: rgb(61, 61, 61);
+  --black: rgb(26, 23, 23);
   --red: rgb(216, 58, 52);
+  --darkred: rgb(83, 39, 39);
   background-color: #eee;
 }
+
+body {
+  background-image: radial-gradient(#c7c7c7 1px, transparent 0),
+    radial-gradient(#c7c7c7 1px, transparent 0);
+  background-color: #eee;
+  background-position: 0 0, 35px 35px;
+  background-size: 70px 70px;
+  overflow-x: hidden;
+}
+
 
 *,
 *::before,
