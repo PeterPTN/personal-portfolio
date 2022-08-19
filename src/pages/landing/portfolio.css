@@ -32,7 +32,7 @@ Hero
 .portfolio__hero-display-container.main {
     border: 1px solid rgba(26, 22, 22, 0.521);
     z-index: 100;
-    background-color: rgba(26, 24, 24, 0.973);
+    background-color: rgba(26, 24, 24, 0.98);
     background-image: url("../../images/texture1.jpg");
     background-size: 200%;
     background-position: 1% 1%;
