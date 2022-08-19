@@ -18,7 +18,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <div className="portfolio__hero-wrapper" id="top">
+        <div className="portfolio__hero-wrapper">
 
             <div className="portfolio__hero-container" >
                 <div className="portfolio__hero-display-container main">

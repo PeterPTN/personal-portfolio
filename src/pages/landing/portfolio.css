@@ -512,7 +512,7 @@ ABOUT SECTION
 }
 
 .portfolio__about-social-container a {
-    color: rgba(192, 137, 74, 0.945);
+    color: rgba(255, 255, 255, 0.849);
     filter: drop-shadow(0px 0px .25rem rgb(14, 13, 13));
     border-radius: 10rem;
     font-size: 2rem;
@@ -766,6 +766,10 @@ ABOUT SECTION
         line-height: 1.75;
     }
 
+    .portfolio__about-info-halves.pic-container {
+        transform: rotateZ(.75deg);
+    }
+
     .portfolio__about-social-container {
         margin-top: .5rem;
         order: 2;
@@ -857,6 +861,10 @@ ABOUT SECTION
 }
 
 @media screen and (max-width: 800px) {
+    .portfolio__about-info-halves.pic-wrapper {
+        width: 100%;
+    }
+
     .portfolio__about-info.books.background {
         display: none;
     }
@@ -868,10 +876,6 @@ ABOUT SECTION
 
 
 @media screen and (max-width: 650px) {
-    .portfolio__about-info-halves.pic-wrapper {
-        width: 100%;
-    }
-
     .portfolio__about-info-halves.pic-container>img,
     .portfolio__about-social-container {
         transform: rotateZ(.75deg);

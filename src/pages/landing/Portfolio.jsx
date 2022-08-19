@@ -10,8 +10,8 @@ const Portfolio = () => {
 
       <div className="portfolio__footer-container">
         <ul>
-          <li>&copy; 2022 <a href="mailto:peter.p.t.nguyen@gmail.com">Peter Nguyen</a></li>
-          <li><a href="#top">Back to top</a></li>
+          <li>&copy; 2022 Peter Nguyen</li>
+          <li><a href="mailto:peter.p.t.nguyen@gmail.com">Contact me</a></li>
         </ul>
       </div>
     </>
