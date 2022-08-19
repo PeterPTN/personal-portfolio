@@ -30,9 +30,13 @@ Hero
 }
 
 .portfolio__hero-display-container.main {
-    border: 1px solid rgba(22, 22, 22, 0.979);
+    border: 1px solid rgba(26, 22, 22, 0.521);
     z-index: 100;
-    background-color: rgb(26, 23, 23);
+    background-color: rgba(26, 24, 24, 0.973);
+    background-image: url("../../images/texture1.jpg");
+    background-size: 200%;
+    background-position: 1% 1%;
+    background-blend-mode: darken;
     width: 100%;
     box-shadow: 0rem -.25rem .5rem rgba(46, 46, 46, 0.274),
         -3rem 1.5rem rgb(83, 39, 39),
@@ -57,7 +61,6 @@ Hero
     position: absolute;
     left: 5rem;
     text-shadow: 0px 0px 1.5rem rgb(34, 34, 34);
-
 }
 
 .portfolio__hero-display-phong-thanh {
@@ -69,7 +72,6 @@ Hero
     animation: flicker 9s infinite;
     animation-fill-mode: backwards;
 }
-
 
 
 .portfolio__hero-display-phong-thanh>h2 {
@@ -245,6 +247,9 @@ Hero
             1.0rem 2.0rem rgb(56, 56, 56),
             1.0rem 2.0rem 1rem rgb(56, 56, 56);
         margin: 0;
+        background: 0;
+        background-color: rgb(39, 24, 24);
+        border: 2.5rem solid rgb(39, 24, 24);
     }
 
     .portfolio__hero-container {
@@ -252,7 +257,7 @@ Hero
     }
 
     .portfolio__hero-display-peter {
-        flex: 10;
+        flex: 45;
         background-position: top;
     }
 
@@ -263,7 +268,7 @@ Hero
 
     .portfolio__hero-display-phong-thanh {
         position: absolute;
-        top: 31%;
+        top: 37.5%;
         left: 7.5rem;
     }
 
@@ -288,7 +293,7 @@ Hero
     .portfolio__hero-display-nguyen>h1 {
         font-size: 8.5rem;
         left: 4rem;
-        bottom: 7rem;
+        bottom: 1.75rem;
         color: #eee;
 
     }
@@ -341,6 +346,7 @@ Hero
             .25rem .25rem rgb(56, 56, 56),
             .25rem .25rem 1rem rgb(56, 56, 56);
         margin: 0;
+        border: .25rem solid rgb(39, 24, 24);
     }
 
     .portfolio__hero-display-peter {
