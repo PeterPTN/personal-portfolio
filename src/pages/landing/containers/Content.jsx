@@ -24,10 +24,10 @@ const Content = () => {
                             <div className="portfolio__about-info-halves pic-container">
                                 <nav className="portfolio__about-social-container">
                                     <ul>
-                                        <li><a href="mailto:peter.p.t.nguyen@gmail.com" target="_blank"><AiFillMail title="Email" className="portfolio__about-social-icons" /></a></li>
-                                        <li><a href="/" target="_blank"><AiFillLinkedin title="LinkedIn" className="portfolio__about-social-icons" /></a></li>
-                                        <li><a href="https://codepen.io/PPTN_" target="_blank"><IoLogoCodepen title="Codepen" className="portfolio__about-social-icons" /></a></li>
-                                        <li><a href="https://github.com/PeterPTN" target="_blank"><AiFillGithub title="Github" className="portfolio__about-social-icons" /></a></li>
+                                        <li><a href="mailto:peter.p.t.nguyen@gmail.com" rel='noreferrer' target="_blank"><AiFillMail title="Email" className="portfolio__about-social-icons" /></a></li>
+                                        <li><a href="https://www.linkedin.com/in/peter-nguyen-05314b171/" rel='noreferrer' target="_blank"><AiFillLinkedin title="LinkedIn" className="portfolio__about-social-icons" /></a></li>
+                                        <li><a href="https://codepen.io/PPTN_" rel='noreferrer' target="_blank"><IoLogoCodepen title="Codepen" className="portfolio__about-social-icons" /></a></li>
+                                        <li><a href="https://github.com/PeterPTN" rel='noreferrer' target="_blank"><AiFillGithub title="Github" className="portfolio__about-social-icons" /></a></li>
                                     </ul>
                                 </nav>
 
@@ -40,7 +40,7 @@ const Content = () => {
                             <h2>About Me</h2>
 
                             <div className="portfolio__about-info details">
-                                <p>Hi, my name is Peter Nguyen. I'm a self-taught front-end web developer from Sydney.
+                                <p>Hi, my name is Peter Nguyen. I'm primarily a self-taught front-end web developer from Sydney.
                                     I began re-training in web development the summer of 2021 after a brief stint in primary-teaching and in other odd jobs. </p>
                                 <p>Since then, I've dedicated most of my freetime to learning how to create web applications. I code mainly in
                                     <span className="html">HTML</span>, <span className="css">CSS</span>, <span className="js">JS</span> and more recently <span className="react">ReactJS</span>
@@ -81,11 +81,11 @@ const Content = () => {
                 <div className="portfolio__project-card-container" >
                     <div className="portfolio__project-card">
                         <div className="portfolio__project-image-container" >
-                            <a href="https://onfilm.netlify.app/" target="_blank">
-                                <img className="film --film-zero" src={film} />
-                                <img className="film --film-one" src={film1} />
-                                <img className="film --film-two" src={film2} />
-                                <img className="film --film-three" src={film3} />
+                            <a href="https://onfilm.netlify.app/" target="_blank" rel='noreferrer'>
+                                <img className="film --film-zero" src={film} alt="OnFilm Web-Page Cutout 1" />
+                                <img className="film --film-one" src={film1} alt="OnFilm Web-Page Cutout 2" />
+                                <img className="film --film-two" src={film2} alt="OnFilm Web-Page Cutout 3" />
+                                <img className="film --film-three" src={film3} alt="OnFilm Web-Page Cutout 4" />
                             </a>
                         </div>
 
@@ -93,8 +93,8 @@ const Content = () => {
                         <div className="portfolio__project-details movie">
                             <h2 className="portfolio__project-details-title">OnFilm</h2>
                             <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs.</p>
-                            <a href="https://github.com/PeterPTN/movieproject" target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                            <a href="https://onfilm.netlify.app/" target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew /> View Website </a>
+                            <a href="https://github.com/PeterPTN/movieproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
+                            <a href="https://onfilm.netlify.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew /> View Website </a>
                         </div>
                     </div>
 

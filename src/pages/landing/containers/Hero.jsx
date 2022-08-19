@@ -29,15 +29,12 @@ const Hero = () => {
                     <div className="portfolio__hero-display-phong-thanh">
                         <h2 className="phong">hòng</h2>
                         <h2 className="thanh">Thành</h2>
-
                     </div>
 
                     <div className="portfolio__hero-display-nguyen">
                         <h1>Nguyen</h1>
                     </div>
-                </div>
 
-                <div className>
 
                 </div>
 
