@@ -41,7 +41,7 @@ const Content = () => {
                             <h2>About Me</h2>
 
                             <div className="portfolio__about-info details">
-                                <p>Hi, my name is Peter Nguyen. I'm primarily a self-taught front-end web developer from Sydney.
+                                <p>Hi, my name is Peter Nguyen. I'm (primarily) a self-taught front-end web developer from Sydney.
                                     I began re-training in web development the summer of 2021 after a brief stint in primary-teaching and in other odd jobs. </p>
                                 <p>Since then, I've dedicated most of my freetime to learning how to create web applications. I code mainly in
                                     <span className="html">HTML</span>, <span className="css">CSS</span>, <span className="js">JS</span> and more recently <span className="react">ReactJS</span>
