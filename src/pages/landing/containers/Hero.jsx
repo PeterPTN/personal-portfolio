@@ -1,55 +1,49 @@
-import React from 'react'
-import { useEffect, useState } from 'react';
-
 const Hero = () => {
-    const [opacity, setOpacity] = useState("1");
-    const [up, setUp] = useState("0")
-
-    useEffect(() => {
-        function handleScroll() {
-            setUp(window.scrollY * 0.02);
-            setOpacity(1 - (window.scrollY * 0.002));
-        }
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        }
-    }, [])
-
     return (
         <div className="portfolio__hero-wrapper">
+            <div className="portfolio__hero-container">
 
-            <div className="portfolio__hero-container" >
-                <div className="portfolio__hero-display-container main">
-                    <div className="portfolio__hero-display-peter">
-                        <h1>Peter</h1>
+                <div className="portfolio__hero-top-row">
+                    <div className="portfolio__hero-top-left">
+                        <h1 className="peter">Peter</h1>
                     </div>
 
-                    <div className="portfolio__hero-display-phong-thanh">
-                        <h2 className="phong">hòng</h2>
-                        <h2 className="thanh">Thành</h2>
+                    <div className="portfolio__hero-top-right">
+                        <h3 className="phong-thanh">Phòng Thành</h3>
                     </div>
-
-                    <div className="portfolio__hero-display-nguyen">
-                        <h1>Nguyen</h1>
-                    </div>
-
-
                 </div>
 
-                <div className="portfolio__hero-main-tag-container" style={{
-                    opacity: opacity,
-                    transform: `translateY(-${up}rem)`
-                }}>
 
-                    <h4>Front-end Web Developer</h4>
-                    <span />
-                    <h2>People-centric Designs</h2>
+                <div className="portfolio__hero-bottom-row" >
+                    <div className="portfolio__hero-bot-left">
+                        <div className="lantern-container">
+                            <div className="lantern" />
+                        </div>
+                    </div>
 
+                    <div className="portfolio__hero-bot-right">
+                        <h2 className="nguyen">nguyen</h2>
+                        <h4 className="people">People-centric Designs</h4>
+                        
+                    </div>
                 </div>
+
+                <ul className="postit postit--pink">
+                    <li><a href="mailto:peter.p.t.nguyen@gmail.com">Contact</a></li>
+                </ul>
+
+                <ul className="postit postit--yellow">
+                </ul>
+
+                <ul className="postit postit--yellow second">
+                </ul>
+
+                <p className="scroll">Scroll to see more</p>
+
+                <h2 className="front-end">Front-end Web Developer</h2>
+
             </div>
-        </div>
+        </div >
     )
 }
 

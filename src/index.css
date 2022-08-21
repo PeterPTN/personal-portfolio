@@ -5,8 +5,11 @@
 }
 
 html {
-  --primary-font: 'Anton', sans-serif;
-  --secondary-font: 'Dancing Script', cursive;
+  --primary-font: 'Anton', Arial, Helvetica, sans-serif;
+  --secondary-font: 'Dancing Script', Arial, Helvetica, cursive;
+  --marker-font: 'Permanent Marker', Arial, Helvetica, cursive;
+  --street-font: 'Shadows Into Light', Arial, Helvetica, cursive;
+  --thin-font: 'Kalam', Arial, Helvetica, cursive;
   --grey: rgb(107, 97, 97);
   --lightgrey: rgb(206, 199, 199);
   --darkgrey: rgb(61, 61, 61);

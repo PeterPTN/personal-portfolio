@@ -1,6 +1,7 @@
 import React from 'react'
 import face from '../../../images/face.jpg'
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
+import { FaMusic } from "react-icons/fa";
 import { IoLogoCodepen } from 'react-icons/io'
 import { MdOpenInNew } from "react-icons/md";
 import { RiFileTextLine } from "react-icons/ri";
@@ -102,6 +103,7 @@ const Content = () => {
                     <div className="portfolio__project-card music">
                         <div className="portfolio__project-image-container" href="https://onfilm.netlify.app/" target="_blank">
                             <h2>Music Streaming App Coming Soon - 30th September 2022</h2>
+                            <FaMusic className="musicnote" />
                         </div>
 
                         <div className="portfolio__project-details music">
