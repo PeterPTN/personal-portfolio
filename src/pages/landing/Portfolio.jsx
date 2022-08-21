@@ -1,11 +1,11 @@
 import './portfolio.css';
-import Hero1 from './containers/Hero1';
+import Hero from './containers/Hero';
 import Content from './containers/Content';
 
 const Portfolio = () => {
   return (
     <>
-      <Hero1 />
+      <Hero />
       <Content />
 
       <div className="portfolio__footer-container">
