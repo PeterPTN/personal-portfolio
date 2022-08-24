@@ -1,5 +1,5 @@
 import React from 'react'
-import face from '../../../images/face.jpg'
+import face from '../../../images/faceld.jpg'
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { FaMusic } from "react-icons/fa";
 import { IoLogoCodepen } from 'react-icons/io'
