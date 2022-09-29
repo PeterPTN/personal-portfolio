@@ -429,17 +429,18 @@ ALTERNATE HERO
 }
 
 @media (max-width: 300px) {
+
     .postit,
     .scroll,
-    .people  {
+    .people {
         visibility: hidden;
     }
 
     .peter,
     .nguyen {
-        transform:rotateZ(270deg);
+        transform: rotateZ(270deg);
     }
-} 
+}
 
 /*
 
@@ -677,30 +678,35 @@ ABOUT SECTION
     height: 255px;
 }
 
+/* CSS In Depth */
 .portfolio__about-info.books li:nth-child(1)::after {
     content: " ✓";
     color: rgb(2, 110, 2);
     font-size: 1rem;
 }
 
+/* Headfirst */
 .portfolio__about-info.books li:nth-child(2)::after {
     content: " ✓";
     color: rgb(2, 110, 2);
     font-size: 1rem;
 }
 
+/* YDKJS Yet */
 .portfolio__about-info.books li:nth-child(3)::after {
     content: " —";
     color: rgb(214, 115, 34);
     font-size: 1rem;
 }
 
+/* React Quickly */
 .portfolio__about-info.books li:nth-child(4)::after {
-    content: " —";
-    color: rgb(214, 115, 34);
+    content: " ✓";
+    color: rgb(2, 110, 2);
     font-size: 1rem;
 }
 
+/* Design of Everyday Things */
 .portfolio__about-info.books li:nth-child(5)::after {
     content: " —";
     color: rgb(214, 115, 34);
@@ -948,15 +954,11 @@ PROJECTS
 }
 
 /* Music Container */
-.portfolio__project-image-container>h2 {
-    position: absolute;
-    left: 2rem;
-    bottom: 2rem;
-    color: #eee;
-    font-weight: lighter;
+.portfolio__project-image-container>a {
+    perspective: 100px;
 }
 
-.film {
+.image {
     position: absolute;
     box-shadow: 0px 0px 1rem rgba(49, 49, 49, 0.363);
     transition: all .15s;
@@ -988,6 +990,7 @@ PROJECTS
     transform: rotateZ(1deg);
 }
 
+/* OnFilm */
 .--film-three {
     top: 2rem;
     bottom: 0;
@@ -995,6 +998,47 @@ PROJECTS
     z-index: 130;
     box-shadow: 0px 0px 2rem rgba(24, 24, 24, 0.842);
     transform: rotateZ(-7.5deg) scale(1.25);
+}
+
+/* Playlist */
+.--music-zero {
+    bottom: -2rem;
+    left: 0rem;
+    z-index: 100;
+}
+
+/* Search Toggle */
+.--music-one {
+    bottom: -.5rem;
+    left: 23rem;
+    z-index: 90;
+    transform: rotateZ(3deg);
+}
+
+/* Lyrics (Beyonce) */
+.--music-two {
+    transform: scale(1.1);
+    top: 0rem;
+    right: 0rem;
+}
+
+/* Lyrics (Vince Staples) */
+.--music-three {
+    transform: scale(1.1) rotateZ(-20deg);
+    bottom: 0;
+    left: 15.5rem;
+    top: -2rem;
+}
+
+/* E-Oke */
+.--music-four {
+    top: 7.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: scale(1.25) rotateY(1deg);
+    box-shadow: 0px 0px 1rem rgb(39, 39, 37);
+    z-index: 150;
 }
 
 .portfolio__project-card.music {
@@ -1017,21 +1061,22 @@ PROJECTS
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem 2rem;
-}
-
-.portfolio__project-details.movie {
-    background: rgb(194, 97, 186);
     width: 350px;
     display: flex;
     text-align: center;
     align-items: center;
     z-index: 200;
-    bottom: -4rem;
-    left: 5rem;
     font-size: 1rem;
-    transform: rotateZ(3deg);
+}
+
+/* Movie Postit */
+.portfolio__project-details.movie {
+    background: rgb(194, 97, 186);
     border-right: 1px solid rgba(134, 47, 127, 0.158);
     border-top: 1px solid rgba(134, 47, 127, 0.158);
+    bottom: -4rem;
+    left: 5rem;
+    transform: rotateZ(3deg);
 }
 
 .portfolio__project-details.movie h2 {
@@ -1049,19 +1094,42 @@ PROJECTS
     letter-spacing: 1px;
 }
 
-/*.portfolio__project-details.music {}*/
-
-.portfolio__project-details.movie * {
-    color: black;
+.portfolio__project-details.movie>a:hover {
+    background-color: rgb(161, 77, 154);
+    color: pink;
 }
 
-/* View Website */
-.portfolio__project-details.movie:nth-child(1) {
-    color: red;
+/* Music Postit */
+.portfolio__project-details.music {
+    background: rgb(224, 139, 41);
+    border-right: 1px solid rgba(134, 47, 127, 0.158);
+    border-top: 1px solid rgba(134, 47, 127, 0.158);
+    bottom: -4rem;
+    right: 5rem;
+    transform: rotateZ(-3deg);
 }
+
+.portfolio__project-details.music.background {
+    transform: rotateZ(-2deg);
+    height: 190px;
+    background: rgb(151, 95, 31);
+    box-shadow: 2px 2px 16px rgb(80, 80, 80);
+}
+
+.portfolio__project-details.music>a:last-child {
+    opacity: .5;
+}
+
+.portfolio__project-details.music>a:hover {
+    background-color: rgb(151, 95, 31);
+    color: rgb(255, 246, 192);
+}
+
+/* General Details */
 
 .portfolio__project-details a {
     display: inline-block;
+    color: black;
 }
 
 .portfolio__project-details *+* {
@@ -1082,18 +1150,13 @@ PROJECTS
     display: inline-flex;
     align-items: center;
     column-gap: .25em;
-    /* Possible change */
-    width: 8rem;
     font-family: arial;
     font-weight: light;
     transition: all .125s;
     padding: .25rem;
 }
 
-.portfolio__project-details>a:hover {
-    background-color: rgb(161, 77, 154);
-    color: pink;
-}
+
 
 @media screen and (max-width: 1650px) {
 

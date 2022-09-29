@@ -1,14 +1,21 @@
 import React from 'react'
 import face from '../../../images/faceld.jpg'
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
-import { FaMusic } from "react-icons/fa";
 import { IoLogoCodepen } from 'react-icons/io'
 import { MdOpenInNew } from "react-icons/md";
 import { RiFileTextLine } from "react-icons/ri";
+
 import film from "../../../images/onfilmzoomed.png"
 import film1 from "../../../images/onfilmzoomed1.png"
 import film2 from "../../../images/onfilmzoomed2.png"
 import film3 from "../../../images/onfilmtitle.png"
+
+import M1 from "../../../images/music/M1.png"
+import M2 from "../../../images/music/M2.png"
+import M3 from "../../../images/music/M3.png"
+import M4 from "../../../images/music/M4.png"
+import M5 from "../../../images/music/M5.png"
+import M6 from "../../../images/music/M6.png"
 
 const Content = () => {
 
@@ -83,10 +90,10 @@ const Content = () => {
                     <div className="portfolio__project-card">
                         <div className="portfolio__project-image-container" >
                             <a href="https://onfilm.netlify.app/" target="_blank" rel='noreferrer'>
-                                <img className="film --film-zero" src={film} alt="OnFilm Web-Page Cutout 1" />
-                                <img className="film --film-one" src={film1} alt="OnFilm Web-Page Cutout 2" />
-                                <img className="film --film-two" src={film2} alt="OnFilm Web-Page Cutout 3" />
-                                <img className="film --film-three" src={film3} alt="OnFilm Web-Page Cutout 4" />
+                                <img className="image --film-zero" src={film} alt="OnFilm Web-Page Cutout 1" />
+                                <img className="image --film-one" src={film1} alt="OnFilm Web-Page Cutout 2" />
+                                <img className="image --film-two" src={film2} alt="OnFilm Web-Page Cutout 3" />
+                                <img className="image --film-three" src={film3} alt="OnFilm Web-Page Cutout 4" />
                             </a>
                         </div>
 
@@ -102,12 +109,21 @@ const Content = () => {
 
                     <div className="portfolio__project-card music">
                         <div className="portfolio__project-image-container" href="https://onfilm.netlify.app/" target="_blank">
-                            <h2>Music Streaming App Coming Soon - 30th September 2022</h2>
-                            <FaMusic className="musicnote" />
+                            <a href="" target="_blank" rel='noreferrer' style={{pointerEvents: "none"}}>
+                                <img className="image --music-zero" src={M1} alt="OnFilm Web-Page Cutout 1" />
+                                <img className="image --music-one" src={M2} alt="OnFilm Web-Page Cutout 2" />
+                                <img className="image --music-two" src={M3} alt="OnFilm Web-Page Cutout 3" />
+                                <img className="image --music-three" src={M5} alt="OnFilm Web-Page Cutout 4" />
+                                <img className="image --music-four" src={M6} alt="OnFilm Web-Page Cutout 5" />
+                            </a>
                         </div>
 
+                        <div className="portfolio__project-details music background" />
                         <div className="portfolio__project-details music">
-
+                            <h2 className="portfolio__project-details-title">E-Ōke</h2>
+                            <p className="portfolio__project-details-description">A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.</p>
+                            <a href="https://github.com/PeterPTN/karaokeproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
+                            <a href="" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link" style={{pointerEvents: "none"}}><MdOpenInNew />Configuring Deployment</a>
                         </div>
                     </div>
 
