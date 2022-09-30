@@ -109,7 +109,7 @@ const Content = () => {
 
                     <div className="portfolio__project-card music">
                         <div className="portfolio__project-image-container" href="https://onfilm.netlify.app/" target="_blank">
-                            <a href="" target="_blank" rel='noreferrer' style={{pointerEvents: "none"}}>
+                            <a href="https://e-oke.adaptable.app/" target="_blank" rel='noreferrer'>
                                 <img className="image --music-zero" src={M1} alt="OnFilm Web-Page Cutout 1" />
                                 <img className="image --music-one" src={M2} alt="OnFilm Web-Page Cutout 2" />
                                 <img className="image --music-two" src={M3} alt="OnFilm Web-Page Cutout 3" />
@@ -123,7 +123,7 @@ const Content = () => {
                             <h2 className="portfolio__project-details-title">E-Ōke</h2>
                             <p className="portfolio__project-details-description">A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.</p>
                             <a href="https://github.com/PeterPTN/karaokeproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                            <a href="" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link" style={{pointerEvents: "none"}}><MdOpenInNew />Configuring Deployment</a>
+                            <a href="https://e-oke.adaptable.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
                         </div>
                     </div>
 
