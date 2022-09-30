@@ -1,6 +1,4 @@
-#Personal Portfolio
-
-It is what it is. My personal portfolio.
+# My Personal Portfolio
 
 Hosted by Netlify
 
