@@ -1000,17 +1000,18 @@ PROJECTS
     transform: rotateZ(-7.5deg) scale(1.25);
 }
 
-/* Playlist */
+/* Search */
 .--music-zero {
-    bottom: -2rem;
-    left: 0rem;
-    z-index: 100;
+    bottom: -7rem;
+    left: -10rem;
+    z-index: 110;
+    transform: rotateZ(-5deg);
 }
 
-/* Search Toggle */
+/* Playlist */
 .--music-one {
-    bottom: -.5rem;
-    left: 23rem;
+    bottom: -3rem;
+    right: 20rem;
     z-index: 90;
     transform: rotateZ(3deg);
 }
@@ -1024,21 +1025,20 @@ PROJECTS
 
 /* Lyrics (Vince Staples) */
 .--music-three {
-    transform: scale(1.1) rotateZ(-20deg);
-    bottom: 0;
-    left: 15.5rem;
+    transform: scale(1.1) rotateZ(-10deg);
     top: -2rem;
+    left: 20.5rem;
+    bottom: -5rem;
+    z-index: 100;
 }
 
 /* E-Oke */
 .--music-four {
-    top: 7.5rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: scale(1.25) rotateY(1deg);
-    box-shadow: 0px 0px 1rem rgb(39, 39, 37);
-    z-index: 150;
+    top: 3rem;
+    left: 35%;
+    transform: scale(1) rotateY(1.5deg);
+    box-shadow: 0 0 1rem rgba(32, 32, 32, 0.979);
+    z-index: 200;
 }
 
 .portfolio__project-card.music {
@@ -1101,28 +1101,29 @@ PROJECTS
 
 /* Music Postit */
 .portfolio__project-details.music {
-    background: rgb(224, 139, 41);
+    background: rgb(71, 224, 41);
     border-right: 1px solid rgba(134, 47, 127, 0.158);
     border-top: 1px solid rgba(134, 47, 127, 0.158);
-    bottom: -4rem;
-    right: 5rem;
-    transform: rotateZ(-3deg);
+    bottom: 1.25rem;
+    right: 2rem;
+    transform: rotateZ(-5deg);
+    box-shadow: 0 0 1rem rgb(43, 42, 42);
 }
 
 .portfolio__project-details.music.background {
-    transform: rotateZ(-2deg);
-    height: 190px;
-    background: rgb(151, 95, 31);
-    box-shadow: 2px 2px 16px rgb(80, 80, 80);
+    transform: rotateZ(2deg);
+    height: 220px;
+    background: rgb(35, 151, 31);
+    box-shadow: 2px 2px 5px rgb(63, 63, 63);
 }
 
 .portfolio__project-details.music>a:last-child {
-    opacity: .5;
+    opacity: 1;
 }
 
 .portfolio__project-details.music>a:hover {
-    background-color: rgb(151, 95, 31);
-    color: rgb(255, 246, 192);
+    background-color: rgb(41, 151, 31);
+    color: rgb(192, 255, 195);
 }
 
 /* General Details */
@@ -1155,8 +1156,6 @@ PROJECTS
     transition: all .125s;
     padding: .25rem;
 }
-
-
 
 @media screen and (max-width: 1650px) {
 
@@ -1225,6 +1224,11 @@ PROJECTS
         margin-bottom: 1rem;
     }
 
+    /* E-Oke */
+    .--music-four {
+        left: 10%;
+    }
+
     /* Popular */
     .--film-zero {
         right: 7rem;
@@ -1234,6 +1238,23 @@ PROJECTS
 }
 
 @media screen and (max-width: 650px) {
+    /* E-Oke */
+    .--music-four {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    /* Vince Staples */
+    .--music-three {
+        transform: scale(1.2) rotateZ(22deg);
+        top: 10rem;
+        left: 2rem;
+    }
+
+    /* Beyonce */
+    .--music-two {
+        bottom: 0;
+    }
 
     /* Popular */
     .--film-zero {
@@ -1265,8 +1286,23 @@ PROJECTS
         font-size: .9rem;
     }
 
+    .portfolio__project-details.music {
+        width: 250px;
+    }
+
     .portfolio__project-card {
         margin-bottom: 3rem;
+    }
+
+    /* Playlist */
+    .--music-zero {
+        transform: scale(1.2) rotateZ(-35deg);
+        left: -10rem;
+    }
+
+    /* Beyonce */
+    .--music-two {
+        transform: scale(1.5);
     }
 }
 
@@ -1276,6 +1312,10 @@ PROJECTS
         bottom: -5rem;
         left: .5rem;
         font-size: .8rem;
+    }
+
+    .portfolio__project-details.music {
+        width: 200px;
     }
 
     .--film-zero {
