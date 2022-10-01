@@ -124,6 +124,7 @@ const Content = () => {
                             <p className="portfolio__project-details-description">A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.</p>
                             <a href="https://github.com/PeterPTN/karaokeproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
                             <a href="https://e-oke.adaptable.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
+                            <p classname="portfolio__project-details-modal">(Requires Spotify Premium)</p>
                         </div>
                     </div>
 
