@@ -530,7 +530,7 @@ ABOUT SECTION
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0;
+    padding: 6.5rem 0;
     background: url("../../images/blackbeigedragon.jpg"), url("../../images/lights.jpg");
     background-blend-mode: hard-light;
     background-size: cover;
@@ -575,7 +575,7 @@ ABOUT SECTION
 }
 
 .portfolio__about-info.details {
-    padding: .5rem 2rem 2.75rem 2rem;
+    padding: .5rem 2rem 2rem 2rem;
 }
 
 .portfolio__about-info.details>p {
@@ -619,8 +619,19 @@ ABOUT SECTION
     padding: .05rem .25rem;
 }
 
+.typescript {
+    background-color: #234d79dc;
+    padding: .05rem .25rem;
+    color: rgb(17, 17, 17);
+}
+
+.java {
+    background-color: #eb0b0bcc;
+    padding: .05rem .25rem;
+}
+
 .portfolio__about-info.milestones {
-    margin-left: 3rem;
+    margin-left: 2.5rem;
     transform: rotateZ(.05deg);
     list-style: decimal;
     position: static;
@@ -636,6 +647,7 @@ ABOUT SECTION
     display: inline-flex;
     position: absolute;
     top: -3.15rem;
+    left: -.75rem;
     padding: .15rem .5rem;
 }
 
@@ -708,8 +720,8 @@ ABOUT SECTION
 
 /* Design of Everyday Things */
 .portfolio__about-info.books li:nth-child(5)::after {
-    content: " —";
-    color: rgb(214, 115, 34);
+    content: " ✓";
+    color: rgb(2, 110, 2);
     font-size: 1rem;
 }
 

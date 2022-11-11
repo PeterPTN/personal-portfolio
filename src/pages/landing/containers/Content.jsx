@@ -1,5 +1,6 @@
 import React from 'react'
-import face from '../../../images/faceld.jpg'
+import face from '../../../images/faceld.jpg';
+import face2 from '../../../images/face2.jpg';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { IoLogoCodepen } from 'react-icons/io'
 import { MdOpenInNew } from "react-icons/md";
@@ -13,7 +14,6 @@ import film3 from "../../../images/onfilmtitle.png"
 import M1 from "../../../images/music/M1.png"
 import M2 from "../../../images/music/M2.png"
 import M3 from "../../../images/music/M3.png"
-import M4 from "../../../images/music/M4.png"
 import M5 from "../../../images/music/M5.png"
 import M6 from "../../../images/music/M6.png"
 
@@ -28,6 +28,7 @@ const Content = () => {
                     <div className="portfolio__about-info-container second-background" />
 
                     <div className="portfolio__about-info-container main">
+                        {/* pic-wrapper determines height of about me section through padding*/}
                         <div className="portfolio__about-info-halves pic-wrapper">
                             <div className="portfolio__about-info-halves pic-container">
                                 <nav className="portfolio__about-social-container">
@@ -39,7 +40,7 @@ const Content = () => {
                                     </ul>
                                 </nav>
 
-                                <img src={face} />
+                                <img src={face2} />
                             </div>
                         </div>
 
@@ -51,7 +52,7 @@ const Content = () => {
                                 <p>Hi, my name is Peter Nguyen. I'm (primarily) a self-taught front-end web developer from Sydney.
                                     I began re-training in web development the summer of 2021 after a brief stint in primary-teaching and in other odd jobs. </p>
                                 <p>Since then, I've dedicated most of my freetime to learning how to create web applications. I code mainly in
-                                    <span className="html">HTML</span>, <span className="css">CSS</span>, <span className="js">JS</span> and more recently <span className="react">ReactJS</span>
+                                    <span className="html">HTML</span>, <span className="css">CSS</span>, <span className="js">JS</span>, <span className="react">ReactJS</span> and more recently <span className="typescript">TypeScript</span> and <span className="java">Java</span> 
                                     . Below you'll find some milestones I've hit and projects I've made.</p>
                             </div>
 
@@ -61,9 +62,10 @@ const Content = () => {
                                     <h3>Milestones</h3>
                                     <ul >
                                         <li>Certificate IV in IT (Web Development)</li>
-                                        <li>FreeCodeCamp Responsive Web Design Certificate</li>
-                                        <li>FreeCodeCamp JavaScript Certificate</li>
-                                        <li>FreeCodeCamp ReactJS Module</li>
+                                        <li>FreeCodeCamp - Responsive Web Design Certificate</li>
+                                        <li>FreeCodeCamp - JavaScript Certificate</li>
+                                        <li>FreeCodeCamp - ReactJS Module</li>
+                                        <li>CodeAcademy - Java Course</li>
                                     </ul>
                                 </div>
 
@@ -127,7 +129,6 @@ const Content = () => {
                             <p classname="portfolio__project-details-modal">(Requires Spotify Premium)</p>
                         </div>
                     </div>
-
                 </div>
 
             </div>
