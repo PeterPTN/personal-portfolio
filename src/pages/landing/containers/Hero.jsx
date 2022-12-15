@@ -22,7 +22,7 @@ const Hero = () => {
                     </div>
 
                     <div className="portfolio__hero-bot-right">
-                        <h2 className="nguyen">nguyen</h2>
+                        <h2 className="nguyen">Nguyen</h2>
                         <h4 className="people">People-centric Designs</h4>
                         
                     </div>
