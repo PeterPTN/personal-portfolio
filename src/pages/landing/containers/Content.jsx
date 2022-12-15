@@ -1,5 +1,4 @@
 import React from 'react'
-import face from '../../../images/faceld.jpg';
 import face2 from '../../../images/face2.jpg';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { IoLogoCodepen } from 'react-icons/io'
@@ -16,6 +15,12 @@ import M2 from "../../../images/music/M2.png"
 import M3 from "../../../images/music/M3.png"
 import M5 from "../../../images/music/M5.png"
 import M6 from "../../../images/music/M6.png"
+
+import MCAbout from "../../../images/machina/about.png"
+import MCAstro from "../../../images/machina/astro.png"
+import MCCards from "../../../images/machina/cards.png"
+import MCTitle from "../../../images/machina/title.png"
+import MCCHero from "../../../images/machina/hero.png"
 
 const Content = () => {
 
@@ -52,7 +57,7 @@ const Content = () => {
                                 <p>Hi, my name is Peter Nguyen. I'm (primarily) a self-taught front-end web developer from Sydney.
                                     I began re-training in web development the summer of 2021 after a brief stint in primary-teaching and in other odd jobs. </p>
                                 <p>Since then, I've dedicated most of my freetime to learning how to create web applications. I code mainly in
-                                    <span className="html">HTML</span>, <span className="css">CSS</span>, <span className="js">JS</span>, <span className="react">ReactJS</span> and more recently <span className="typescript">TypeScript</span> and <span className="java">Java</span> 
+                                    <span className="html">HTML</span>, <span className="css">CSS</span>, <span className="js">JS</span>, <span className="react">ReactJS</span> and more recently <span className="typescript">TypeScript</span> and <span className="java">Java</span>
                                     . Below you'll find some milestones I've hit and projects I've made.</p>
                             </div>
 
@@ -102,7 +107,7 @@ const Content = () => {
                         <div className="portfolio__project-details movie background" />
                         <div className="portfolio__project-details movie">
                             <h2 className="portfolio__project-details-title">OnFilm</h2>
-                            <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs.</p>
+                            <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs. Currently undergoing CORS fixes!</p>
                             <a href="https://github.com/PeterPTN/movieproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
                             <a href="https://onfilm.netlify.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew /> View Website </a>
                         </div>
@@ -110,13 +115,13 @@ const Content = () => {
 
 
                     <div className="portfolio__project-card music">
-                        <div className="portfolio__project-image-container" href="https://onfilm.netlify.app/" target="_blank">
+                        <div className="portfolio__project-image-container">
                             <a href="https://e-oke.adaptable.app/" target="_blank" rel='noreferrer'>
-                                <img className="image --music-zero" src={M1} alt="OnFilm Web-Page Cutout 1" />
-                                <img className="image --music-one" src={M2} alt="OnFilm Web-Page Cutout 2" />
-                                <img className="image --music-two" src={M3} alt="OnFilm Web-Page Cutout 3" />
-                                <img className="image --music-three" src={M5} alt="OnFilm Web-Page Cutout 4" />
-                                <img className="image --music-four" src={M6} alt="OnFilm Web-Page Cutout 5" />
+                                <img className="image --music-zero" src={M1} alt="E-oke Web-Page Cutout 1" />
+                                <img className="image --music-one" src={M2} alt="E-oke Web-Page Cutout 2" />
+                                <img className="image --music-two" src={M3} alt="E-oke Web-Page Cutout 3" />
+                                <img className="image --music-three" src={M5} alt="E-oke Web-Page Cutout 4" />
+                                <img className="image --music-four" src={M6} alt="E-oke Web-Page Cutout 5" />
                             </a>
                         </div>
 
@@ -126,7 +131,26 @@ const Content = () => {
                             <p className="portfolio__project-details-description">A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.</p>
                             <a href="https://github.com/PeterPTN/karaokeproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
                             <a href="https://e-oke.adaptable.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
-                            <p classname="portfolio__project-details-modal">(Requires Spotify Premium)</p>
+                            <p className="portfolio__project-details-modal">(Requires Spotify Premium)</p>
+                        </div>
+                    </div>
+
+                    <div className="portfolio__project-card machina">
+                        <div className="portfolio__project-image-container">
+                            <a href="https://peterptn.github.io/machinaco/index.html" target="_blank" rel='noreferrer'>
+                                <img className="image --machina-zero" src={MCAbout} alt="Machina Web-Page Cutout 1" />
+                                <img className="image --machina-two" src={MCCards} alt="Machina Web-Page Cutout 3" />
+                                <img className="image --machina-three" src={MCTitle} alt="Machina Web-Page Cutout 4" />
+                                <img className="image --machina-four" src={MCCHero} alt="Machina Web-Page Cutout 5" />
+                            </a>
+                        </div>
+
+                        <div className="portfolio__project-details machina background" />
+                        <div className="portfolio__project-details machina">
+                            <h2 className="portfolio__project-details-title">Machina.co</h2>
+                            <p className="portfolio__project-details-description">A simple mock company portfolio made with HTML, SASS and JS.</p>
+                            <a href="https://github.com/PeterPTN/machinaco" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
+                            <a href="https://peterptn.github.io/machinaco/index.html" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
                         </div>
                     </div>
                 </div>
