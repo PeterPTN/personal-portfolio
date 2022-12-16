@@ -52,7 +52,7 @@ ALTERNATE HERO
     color: #eee;
     text-shadow: 0px 0px .15rem rgb(87, 10, 10), 0px 0px 1rem black;
     transform: rotateX(5deg);
-    font-size: 18.5vw;
+    font-size: 18.5rem;
     line-height: 12.5rem;
     position: relative;
     bottom: -2rem;
@@ -125,7 +125,7 @@ ALTERNATE HERO
     transform: none;
     z-index: 100;
     margin-left: 1rem;
-    font-size: 13vw;
+    font-size: 13.75rem;
     border-radius: 2.5rem;
     border: .5rem solid transparent;
     border-top-width: .75rem;
@@ -242,7 +242,7 @@ ALTERNATE HERO
     color: rgb(219, 152, 152);
     text-shadow: 0px 0px 1rem rgb(182, 38, 74), 0px 0px 5px black;
     font-size: 4rem;
-    bottom: 5.5rem;
+    bottom: 4.9rem;
     left: 7.5vw;
     margin: 0 auto;
     font-family: var(--marker-font);

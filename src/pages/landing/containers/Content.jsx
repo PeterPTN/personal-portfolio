@@ -17,7 +17,6 @@ import M5 from "../../../images/music/M5.png"
 import M6 from "../../../images/music/M6.png"
 
 import MCAbout from "../../../images/machina/about.png"
-import MCAstro from "../../../images/machina/astro.png"
 import MCCards from "../../../images/machina/cards.png"
 import MCTitle from "../../../images/machina/title.png"
 import MCCHero from "../../../images/machina/hero.png"
@@ -45,7 +44,7 @@ const Content = () => {
                                     </ul>
                                 </nav>
 
-                                <img src={face2} />
+                                <img src={face2} alt="My face" />
                             </div>
                         </div>
 
