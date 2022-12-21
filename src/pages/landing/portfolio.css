@@ -6,10 +6,11 @@ ALTERNATE HERO
 
 .portfolio__hero-wrapper {
     height: 930px;
-    width: 100vw;
+    width: 100%;
     margin: auto;
     padding: 3rem 6rem 4rem;
     perspective: 400px;
+    overflow-x: hidden;
 }
 
 .portfolio__hero-container {
@@ -28,8 +29,8 @@ ALTERNATE HERO
     background-blend-mode: hard-light;
     background-size: 200%;
     background-position: 1% 1%;
-    background-color: rgb(219, 110, 20);
     transform: rotateX(1.5deg) rotateY(.25deg);
+    background-color: rgba(255, 192, 203, 0.281);
 }
 
 .portfolio__hero-top-row {
@@ -162,7 +163,7 @@ ALTERNATE HERO
     padding: .15rem .3rem;
     text-shadow: 0px 0px .5rem black;
     animation: flicker 3s infinite;
-    font-size: 1.25rem
+    font-size: 1.15rem
 }
 
 @keyframes flicker {
@@ -219,7 +220,7 @@ ALTERNATE HERO
     text-transform: lowercase;
     transform: rotate(90deg);
     margin-top: 1.5rem;
-    margin-left: .25rem;
+    margin-left: .15rem;
     font-size: 3rem;
     letter-spacing: -3px;
     color: rgb(32, 32, 32);
@@ -242,7 +243,7 @@ ALTERNATE HERO
     color: rgb(219, 152, 152);
     text-shadow: 0px 0px 1rem rgb(182, 38, 74), 0px 0px 5px black;
     font-size: 4rem;
-    bottom: 4.9rem;
+    bottom: 4.45rem;
     left: 7.5vw;
     margin: 0 auto;
     font-family: var(--marker-font);
@@ -252,7 +253,6 @@ ALTERNATE HERO
 @media screen and (max-width:1550px) {
     .portfolio__hero-wrapper {
         padding: 1rem 2rem 4rem;
-        width: 100vw;
         margin: none;
     }
 
@@ -302,7 +302,7 @@ ALTERNATE HERO
 
     .nguyen {
         position: absolute;
-        top: -3.25rem;
+        top: -3.15rem;
         margin: 0;
     }
 
@@ -324,7 +324,7 @@ ALTERNATE HERO
         left: -33rem;
         top: 0rem;
         margin-top: 7rem;
-        font-size: 3.25rem;
+        font-size: 3.15rem;
     }
 
     .portfolio__hero-container {
@@ -395,7 +395,7 @@ ALTERNATE HERO
 
 @media (max-width:550px) {
     .portfolio__hero-wrapper {
-        padding: .5rem .25rem;
+        padding: .5rem .15rem;
     }
 
     .portfolio__hero-container {
@@ -524,7 +524,7 @@ ABOUT SECTION
 
 .portfolio__about-social-container a {
     color: rgba(255, 255, 255, 0.849);
-    filter: drop-shadow(0px 0px .25rem rgb(14, 13, 13));
+    filter: drop-shadow(0px 0px .15rem rgb(14, 13, 13));
     border-radius: 10rem;
     font-size: 2rem;
     display: flex;
@@ -607,48 +607,52 @@ ABOUT SECTION
     display: flex;
     align-items: center;
     position: relative;
-    box-shadow: -0rem -.25rem 1rem rgba(0, 0, 0, 0.274);
+    box-shadow: -0rem -.15rem 1rem rgba(0, 0, 0, 0.274);
 }
 
 .html {
     background-color: rgb(255, 115, 0);
-    padding: .05rem .25rem;
-    margin-left: .25rem;
+    padding: .05rem .15rem;
+    margin-left: .15rem;
 }
 
 .css {
     background-color: rgb(91, 149, 224);
-    padding: .05rem .25rem;
+    padding: .05rem .15rem;
 }
 
 .js {
     background-color: rgb(247, 231, 18);
-    padding: .05rem .25rem;
+    padding: .05rem .15rem;
 }
 
 .react {
     background-color: rgb(114, 224, 228);
-    padding: .05rem .25rem;
+    padding: .05rem .15rem;
 }
 
 .typescript {
     background-color: #234d79dc;
-    padding: .05rem .25rem;
+    padding: .05rem .15rem;
     color: rgb(17, 17, 17);
 }
 
 .java {
     background-color: #eb0b0bcc;
-    padding: .05rem .25rem;
+    padding: .05rem .15rem;
 }
 
 .portfolio__about-info.milestones {
     margin-left: 2.5rem;
     transform: rotateZ(.05deg);
-    list-style: decimal;
-    position: static;
+    position: relative;
+    display: flex;
+    
+    /* Control height of milestones content - jank af */
+    height: 70%;
 }
 
+/* Milestones */
 .portfolio__about-info.milestones>h3 {
     color: var(--black);
     background-color: var(--red);
@@ -663,20 +667,40 @@ ABOUT SECTION
     padding: .15rem .5rem;
 }
 
+/* More */
+.portfolio__about-info.milestones>h4 {
+    padding: .15rem .5rem;
+    background-color: var(--red);
+    background-color: rgb(27, 27, 27);
+    color: rgba(243, 152, 16, 0.945);
+    box-shadow: 0px 0px .5rem rgba(20, 20, 20, 0.473);
+    letter-spacing: .5px;
+    font-weight: normal;
+    position: absolute;
+    top: -2.9rem;
+    left: 6.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all .15s;
+    user-select: none;
+}
+.portfolio__about-info.milestones>h4:hover {
+    box-shadow: 0px 0px 1rem rgb(214, 24, 24);
+}
+
 .portfolio__about-info.milestones ul {
     display: flex;
     flex-direction: column;
     row-gap: .75rem;
 }
 
-
 .portfolio__about-info.milestones li {
-    text-indent: .25rem;
+    text-indent: .15rem;
     letter-spacing: .5px;
     color: rgba(243, 152, 16, 0.945);
     transition: all .15s;
     border-radius: .25em;
-    padding: 0 .25rem;
+    padding: 0 .15rem;
 }
 
 
@@ -702,38 +726,39 @@ ABOUT SECTION
     height: 255px;
 }
 
-/* CSS In Depth */
-.portfolio__about-info.books li:nth-child(1)::after {
+.cssInDepth::after {
     content: " ✓";
     color: rgb(2, 110, 2);
     font-size: 1rem;
 }
 
-/* Headfirst */
-.portfolio__about-info.books li:nth-child(2)::after {
+.headfirst::after {
     content: " ✓";
     color: rgb(2, 110, 2);
     font-size: 1rem;
 }
 
-/* YDKJS Yet */
-.portfolio__about-info.books li:nth-child(3)::after {
+.dontKnow::after {
     content: " —";
     color: rgb(214, 115, 34);
     font-size: 1rem;
 }
 
-/* React Quickly */
-.portfolio__about-info.books li:nth-child(4)::after {
+.reactQuickly::after {
     content: " ✓";
     color: rgb(2, 110, 2);
     font-size: 1rem;
 }
 
-/* Design of Everyday Things */
-.portfolio__about-info.books li:nth-child(5)::after {
+.design::after {
     content: " ✓";
     color: rgb(2, 110, 2);
+    font-size: 1rem;
+}
+
+.artOf::after {
+    content: " —";
+    color: rgb(214, 115, 34);
     font-size: 1rem;
 }
 
@@ -749,6 +774,25 @@ ABOUT SECTION
     row-gap: .75rem;
     color: rgba(0, 0, 0, 0.904);
 }
+
+/* Next Arrow */
+.portfolio__about-info.books>svg {
+    position: absolute;
+    right: .5rem;
+    bottom: .25rem;
+    transition: all .2s;
+    font-size: 1.75rem;
+    border-radius: 50rem;
+    border: 2px solid transparent;
+    color: rgba(0, 0, 0, 0.904);
+    z-index: 100;
+}
+
+.portfolio__about-info.books>svg:hover {
+    cursor: pointer;
+    outline: .35rem solid rgb(228, 43, 43);
+    animation: none;
+}    
 
 @media (max-width: 1650px) {
     .portfolio__content-wrapper {
@@ -821,6 +865,22 @@ ABOUT SECTION
         display: none;
     }
 
+    .portfolio__about-info.milestones {
+        height: 14rem;
+    }
+
+    .portfolio__about-info.milestones {
+        padding: 2rem 0;
+    }
+
+    .portfolio__about-info.milestones h3 {
+        top: -1rem;
+    }
+
+    .portfolio__about-info.milestones>h4 {
+        top: -.7rem;
+    }
+
     .portfolio__about-info.books {
         bottom: -5rem;
         right: 1rem;
@@ -831,14 +891,6 @@ ABOUT SECTION
     .portfolio__about-info.books.background {
         width: 300px;
         height: 300px;
-    }
-
-    .portfolio__about-info.milestones {
-        padding: 2rem 0;
-    }
-
-    .portfolio__about-info.milestones h3 {
-        top: -1rem;
     }
 
     .portfolio__about-info-halves.pic-wrapper {
@@ -869,8 +921,8 @@ ABOUT SECTION
 
     .portfolio__about-info.books {
         bottom: -9.5rem;
-        right: .9rem;
-        width: 225px;
+        right: 0rem;
+        width: 255px;
         height: 370px;
     }
 
@@ -884,11 +936,7 @@ ABOUT SECTION
     }
 }
 
-@media screen and (max-width: 800px) {
-    .portfolio__about-info-halves.pic-wrapper {
-        width: 100%;
-    }
-
+@media screen and (max-width: 850px) {
     .portfolio__about-info.books.background {
         display: none;
     }
@@ -935,7 +983,7 @@ ABOUT SECTION
 
 @media screen and (max-width: 650px) {
     .portfolio__content-wrapper {
-        margin: 5rem .25rem 0;
+        margin: 5rem .15rem 0;
     }
 
     .portfolio__content-container {
@@ -949,6 +997,36 @@ ABOUT SECTION
 PROJECTS
 
 */
+
+.portfolio__projects-header {
+    display: flex;
+    column-gap: 1rem;
+    user-select: none;
+    margin: 1rem 0 ;
+}
+
+.portfolio__projects-header>h2 {
+    cursor: pointer;
+}
+
+.portfolio__projects-header>h2:first-child {
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.portfolio__projects-header>h2:first-child::after {
+    content: " - ";
+}
+
+.portfolio__projects-header>h2:last-child {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1rem;
+    background-color: var(--red);
+    border-radius: 2rem;
+    cursor: not-allowed;
+    box-shadow: 0px 0px .5rem rgba(0, 0, 0, 0.288);
+}
 
 .portfolio__project-card-container {
     display: flex;
@@ -1153,7 +1231,7 @@ PROJECTS
     background: rgb(71, 224, 41);
     border-right: 1px solid rgba(134, 47, 127, 0.158);
     border-top: 1px solid rgba(134, 47, 127, 0.158);
-    bottom: -2.25rem;
+    bottom: -2.15rem;
     right: 2rem;
     transform: rotateZ(-5deg);
     box-shadow: 0 0 1rem rgb(43, 42, 42);
@@ -1178,6 +1256,7 @@ PROJECTS
 .portfolio__project-details.machina>a:hover {
     background-color: rgb(156, 83, 15);
     color: rgb(235, 226, 152);
+  
 }
 
 /* Machina Postit */
@@ -1225,7 +1304,7 @@ PROJECTS
     font-family: arial;
     font-weight: light;
     transition: all .125s;
-    padding: .25rem;
+    padding: .15rem;
 }
 
 @media screen and (max-width: 1650px) {
@@ -1289,7 +1368,7 @@ PROJECTS
 
     /* Machina Card */
     .--machina-two {
-        right: -25rem;
+        right: -15rem;
         top: 15rem;
     }
 

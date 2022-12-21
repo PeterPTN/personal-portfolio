@@ -1,9 +1,10 @@
-import React from 'react'
+import { useState } from 'react'
 import face2 from '../../../images/face2.jpg';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { IoLogoCodepen } from 'react-icons/io'
 import { MdOpenInNew } from "react-icons/md";
 import { RiFileTextLine } from "react-icons/ri";
+import { BsArrowReturnRight } from "react-icons/bs";
 
 import film from "../../../images/onfilmzoomed.png"
 import film1 from "../../../images/onfilmzoomed1.png"
@@ -22,6 +23,9 @@ import MCTitle from "../../../images/machina/title.png"
 import MCCHero from "../../../images/machina/hero.png"
 
 const Content = () => {
+    const [bookToggle, setBookToggle] = useState(false);
+    const [milestoneToggle, setMilestoneToggle] = useState(false);
+    const [projectsToggle, setProjectsToggle] = useState(false);
 
     return (
         <div className="portfolio__content-wrapper">
@@ -64,25 +68,44 @@ const Content = () => {
 
                                 <div className="portfolio__about-info milestones">
                                     <h3>Milestones</h3>
-                                    <ul >
-                                        <li>Certificate IV in IT (Web Development)</li>
-                                        <li>FreeCodeCamp - Responsive Web Design Certificate</li>
-                                        <li>FreeCodeCamp - JavaScript Certificate</li>
-                                        <li>FreeCodeCamp - ReactJS Module</li>
-                                        <li>CodeAcademy - Java Course</li>
-                                    </ul>
+                                    <h4 onClick={() => setMilestoneToggle(!milestoneToggle)}>More &#8594;</h4>
+
+                                    {!milestoneToggle ?
+                                        <ul >
+                                            <li>Certificate IV in IT (Web Development)</li>
+                                            <li>FreeCodeCamp - Responsive Web Design Certificate</li>
+                                            <li>FreeCodeCamp - JavaScript Certificate</li>
+                                            <li>FreeCodeCamp - ReactJS Module</li>
+                                            <li>CodeAcademy - Java Course</li>
+                                        </ul>
+                                        :
+                                        <ul>
+                                            <li>_nology Software Engineer Course (ongoing)</li>
+                                        </ul>
+                                    }
                                 </div>
+
 
                                 <div className="portfolio__about-info books background" />
                                 <div className="portfolio__about-info books">
                                     <h3>Books</h3>
-                                    <ul>
-                                        <li>CSS in Depth (2018, Keith J. Grant)</li>
-                                        <li>Headfirst JavaScript Programming (2015, Elizabeth Robson et al.)</li>
-                                        <li>You Don't Know JavaScript Yet (2020, Kyle Simpson)</li>
-                                        <li>React Quickly (2022, Azat Mardan)</li>
-                                        <li>Design of Everyday Things (2013, Don Norman)</li>
-                                    </ul>
+
+                                    {!bookToggle
+                                        ?
+                                        <ul>
+                                            <li className="cssInDepth">CSS in Depth (2018, Keith J. Grant)</li>
+                                            <li className="headfirst">Headfirst JavaScript Programming (2015, Elizabeth Robson et al.)</li>
+                                            <li className="reactQuicky">React Quickly (2022, Azat Mardan)</li>
+                                            <li className="design">Design of Everyday Things (2013, Don Norman)</li>
+                                            <li className="dontKnow">You Don't Know JavaScript Yet (2020, Kyle Simpson)</li>
+                                        </ul>
+                                        :
+                                        <ul>
+                                            <li className="artOf">The Art of Computer Programming Vol. 1 (1997, Donald E. Knuth)</li>
+                                        </ul>
+                                    }
+
+                                    <BsArrowReturnRight onClick={() => setBookToggle(!bookToggle)} />
                                 </div>
                             </div>
                         </div>
@@ -90,7 +113,20 @@ const Content = () => {
                     </div>
                 </div>
 
-                <h2>Selected works</h2>
+                <div className='portfolio__projects-header'>
+                    {!projectsToggle
+                        ?
+                        <>
+                            <h2>Selected works</h2>
+                            <h2 onClick={() => setProjectsToggle()}>Side-projects</h2>
+                        </>
+                        :
+                        <>
+                            <h2>Side-Projects</h2>
+                            <h2 onClick={() => setProjectsToggle()}>Selected Works</h2>
+                        </>
+                    }
+                </div>
 
                 <div className="portfolio__project-card-container" >
                     <div className="portfolio__project-card">
@@ -106,7 +142,7 @@ const Content = () => {
                         <div className="portfolio__project-details movie background" />
                         <div className="portfolio__project-details movie">
                             <h2 className="portfolio__project-details-title">OnFilm</h2>
-                            <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs. Currently undergoing CORS fixes!</p>
+                            <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs.</p>
                             <a href="https://github.com/PeterPTN/movieproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
                             <a href="https://onfilm.netlify.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew /> View Website </a>
                         </div>
