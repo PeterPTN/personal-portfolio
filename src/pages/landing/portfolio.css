@@ -55,10 +55,10 @@ ALTERNATE HERO
     color: #eee;
     text-shadow: 0px 0px .15rem rgb(87, 10, 10), 0px 0px 1rem black;
     transform: rotateX(5deg);
-    font-size: 18.5rem;
+    font-size: 20rem;
     line-height: 12.5rem;
     position: relative;
-    bottom: -2rem;
+    bottom: 0rem;
 }
 
 .portfolio__hero-top-right {
@@ -69,8 +69,8 @@ ALTERNATE HERO
 
 .phong-thanh {
     font-size: 5.85rem;
-    margin-left: 3.5rem;
-    margin-bottom: .5rem;
+    margin-left: 0rem;
+    margin-bottom: 1.95rem;
     color: rgba(105, 9, 9, 0.836);
     font-family: var(--secondary-font);
 }
@@ -120,20 +120,19 @@ ALTERNATE HERO
 }
 
 .nguyen {
-    color: rgb(27, 26, 26);
+    position: relative;
+    color: rgb(245, 245, 245);
     letter-spacing: -.05rem;
-    color: #eee;
-    padding: .0rem 3rem;
-    transform: none;
+    padding: .0rem 2rem;
     z-index: 100;
-    margin-left: 1rem;
-    font-size: 13.75rem;
-    border-radius: 3.5rem;
+    font-size: 14.75rem;
+    border-radius: 2.5rem;
     border: .35rem solid transparent;
+    top: -1.5rem;
     box-shadow: 0px 0px 1rem rgba(49, 49, 49, 0.705);
     background:
-        linear-gradient(rgb(31, 30, 35), rgb(31, 25, 25)) padding-box,
-        linear-gradient(rgb(219, 205, 205), rgb(31, 25, 25)) border-box;
+    linear-gradient(rgb(31, 30, 35) 5%, rgb(31, 25, 30)) padding-box,
+    linear-gradient(rgb(231, 198, 198) 10%, rgb(31, 25, 30)) border-box;
 }
 
 .people {
@@ -161,6 +160,7 @@ ALTERNATE HERO
     text-transform: uppercase;
     letter-spacing: .4rem;
     padding: .15rem .3rem;
+    border-radius: .35rem;
     text-shadow: 0px 0px .5rem black;
     animation: flicker 3s infinite;
     font-size: 1.15rem
@@ -242,15 +242,15 @@ ALTERNATE HERO
     z-index: 200;
     color: rgb(219, 152, 152);
     text-shadow: 0px 0px 1rem rgb(182, 38, 74), 0px 0px 5px black;
-    font-size: 4rem;
-    bottom: 4.45rem;
+    font-size: 3.9rem;
+    bottom: 4.75rem;
     left: 7.5vw;
     margin: 0 auto;
     font-family: var(--marker-font);
     transform: skewX(-15deg);
 }
 
-@media screen and (max-width:1550px) {
+@media screen and (max-width:1600px) {
     .portfolio__hero-wrapper {
         padding: 1rem 2rem 4rem;
         margin: none;
