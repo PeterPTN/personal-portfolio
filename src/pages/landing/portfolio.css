@@ -131,8 +131,8 @@ ALTERNATE HERO
     top: -1.5rem;
     box-shadow: 0px 0px 1rem rgba(49, 49, 49, 0.705);
     background:
-    linear-gradient(rgb(31, 30, 35) 5%, rgb(31, 25, 30)) padding-box,
-    linear-gradient(rgb(231, 198, 198) 10%, rgb(31, 25, 30)) border-box;
+        linear-gradient(rgb(31, 30, 35) 5%, rgb(31, 25, 30)) padding-box,
+        linear-gradient(rgb(231, 198, 198) 10%, rgb(31, 25, 30)) border-box;
 }
 
 .people {
@@ -497,18 +497,21 @@ ABOUT SECTION
 }
 
 .portfolio__about-info-container.main {
+    width: 100%;
     display: flex;
     margin-bottom: 3rem;
     background: radial-gradient(circle, rgba(65, 55, 53, 1) 0%, rgba(13, 12, 12, 1) 100%);
 }
 
 .portfolio__about-info-container.background {
+    width: 100%;
     position: absolute;
     transform: rotateZ(1deg);
     background-color: rgb(199, 199, 199);
 }
 
 .portfolio__about-info-container.second-background {
+    width: 100%;
     position: absolute;
     transform: rotateZ(-.5deg);
     background-color: rgb(53, 53, 53);
@@ -689,6 +692,10 @@ ABOUT SECTION
     box-shadow: 0px 0px 1rem rgb(214, 24, 24);
 }
 
+.portfolio__about-info.milestones>h4:active {
+    box-shadow: 0px 0px 1rem rgb(167, 21, 21);
+}
+
 .portfolio__about-info.milestones ul {
     display: flex;
     flex-direction: column;
@@ -781,18 +788,25 @@ ABOUT SECTION
     position: absolute;
     right: .5rem;
     bottom: .25rem;
-    transition: all .2s;
     font-size: 1.75rem;
     border-radius: 50rem;
     border: 2px solid transparent;
-    color: rgba(0, 0, 0, 0.904);
+    box-sizing: content-box;
+    color: rgba(0, 0, 0, 0.750);
     z-index: 100;
+    transition: all .15s;
+    padding: 1px;
+    outline: 4px solid transparent;
 }
 
 .portfolio__about-info.books>svg:hover {
     cursor: pointer;
-    outline: .35rem solid rgb(228, 43, 43);
-    animation: none;
+    outline-color: rgb(212, 59, 59);
+    color: rgba(0, 0, 0, 1);
+}
+
+.portfolio__about-info.books>svg:active {
+    outline-color: rgba(173, 49, 49)
 }
 
 @media (max-width: 1650px) {
@@ -801,32 +815,22 @@ ABOUT SECTION
     }
 
     .portfolio__about-info-container.main {
-        max-width: 1100px;
         margin-bottom: 3rem;
     }
 
-    .portfolio__about-info-container.background {
-        width: 1100px;
-        height: 300px;
-    }
-
+    .portfolio__about-info-container.background,
     .portfolio__about-info-container.second-background {
-        width: 1100px;
         height: 300px;
     }
 
-    .portfolio__about-info.books {
+    .portfolio__about-info.books,
+    .portfolio__about-info.books.background {
         width: 300px;
         height: 300px;
     }
 
     .portfolio__about-info.books ul {
         padding: 0 2rem;
-    }
-
-    .portfolio__about-info.books.background {
-        width: 300px;
-        height: 300px;
     }
 
     .portfolio__about-info-halves.pic-wrapper {
@@ -858,10 +862,7 @@ ABOUT SECTION
         align-items: center;
     }
 
-    .portfolio__about-info-container.background {
-        display: none;
-    }
-
+    .portfolio__about-info-container.background,
     .portfolio__about-info-container.second-background {
         display: none;
     }
@@ -938,10 +939,8 @@ ABOUT SECTION
 }
 
 @media screen and (max-width: 850px) {
-    .portfolio__about-info.books.background {
-        display: none;
-    }
 
+    .portfolio__about-info.books.background,
     .portfolio__about-info.books {
         display: none;
     }
@@ -1013,22 +1012,117 @@ PROJECTS
 .portfolio__projects-header>h2:first-child {
     font-size: 3rem;
     letter-spacing: 3px;
+    cursor: default;
 }
 
 .portfolio__projects-header>h2:first-child::after {
     content: " - ";
 }
 
+/* Toggle button */
 .portfolio__projects-header>h2:last-child {
     display: flex;
     align-items: center;
     padding: 0.25rem 1rem;
-    background-color: var(--red);
+    background-color: rgb(173, 173, 173);
+    color: rgb(250, 250, 250);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
     border-radius: 2rem;
-    cursor: not-allowed;
-    box-shadow: 0px 0px .5rem rgba(0, 0, 0, 0.288);
+    letter-spacing: 1.5px;
+    box-shadow: 0px 0px .5rem rgba(34, 34, 34, 0.25);
+    transition: all .15s;
 }
 
+.portfolio__projects-header>h2:last-child:hover {
+    filter: brightness(.95);
+}
+
+.portfolio__projects-header>h2:last-child:active {
+    filter: brightness(.85);
+}
+
+/* Side Projects */
+.portfolio__sideprojects-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+
+}
+
+@media screen and (max-width: 1650px) {
+    .portfolio__sideprojects-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .portfolio__sideprojects-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.portfolio__sideprojects-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 2rem;
+    height: 30rem;
+    background-color: rgb(19, 15, 15);
+    border: 2px solid grey;
+    border-radius: 2px;
+}
+
+.portfolio__sideprojects-card * {
+    color: rgb(233, 233, 233);
+}
+
+.portfolio__sideprojects-card :is(h2, p) {
+    text-shadow: 1px 1px 3px black;
+}
+
+.portfolio__sideprojects-card>h2 {
+    letter-spacing: .5px;
+}
+
+.portfolio__sideprojects-card.fakeos {
+    background: url("../../images/sideprojects/fakeos/fakeos.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.portfolio__sideprojects-card-btns {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.portfolio__sideprojects-card-btns>a {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    box-shadow: 0px 0px .5rem rgba(0, 0, 0, 0.473);
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: var(--red);
+    text-shadow: 0px 0px .5rem grey;
+}
+
+.portfolio__sideprojects-card-btns>a:hover {
+    filter: brightness(.95);
+}
+
+.portfolio__sideprojects-card-btns>a:active {
+    filter: brightness(.9);
+}
+
+.portfolio__sideprojects-card-btns.fakeos>a {
+    background-color: rgb(133, 194, 118);
+}
+
+
+/* Projects Card Container - Selected Works */
 .portfolio__project-card-container {
     display: flex;
     flex-direction: column;

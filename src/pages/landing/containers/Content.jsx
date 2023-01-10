@@ -25,7 +25,7 @@ import MCCHero from "../../../images/machina/hero.png"
 const Content = () => {
     const [bookToggle, setBookToggle] = useState(false);
     const [milestoneToggle, setMilestoneToggle] = useState(false);
-    const [projectsToggle, setProjectsToggle] = useState(false);
+    const [sideprojects, setSideprojects] = useState(true);
 
     return (
         <div className="portfolio__content-wrapper">
@@ -84,8 +84,6 @@ const Content = () => {
                                         </ul>
                                     }
                                 </div>
-
-
                                 <div className="portfolio__about-info books background" />
                                 <div className="portfolio__about-info books">
                                     <h3>Books</h3>
@@ -114,81 +112,113 @@ const Content = () => {
                 </div>
 
                 <div className='portfolio__projects-header'>
-                    {!projectsToggle
+                    {!sideprojects
                         ?
                         <>
                             <h2>Selected works</h2>
-                            <h2 onClick={() => setProjectsToggle()}>Side-projects</h2>
+                            <h2 onClick={() => setSideprojects(!sideprojects)}>Side-projects</h2>
                         </>
                         :
                         <>
                             <h2>Side-Projects</h2>
-                            <h2 onClick={() => setProjectsToggle()}>Selected Works</h2>
+                            <h2 onClick={() => setSideprojects(!sideprojects)}>Selected Works</h2>
                         </>
                     }
                 </div>
+                {!sideprojects ?
+                    <div className="portfolio__project-card-container" >
+                        <>
+                            < div className="portfolio__project-card">
+                                <div className="portfolio__project-image-container" >
+                                    <a href="https://onfilm.netlify.app/" target="_blank" rel='noreferrer'>
+                                        <img className="image --film-zero" src={film} alt="OnFilm Web-Page Cutout 1" />
+                                        <img className="image --film-one" src={film1} alt="OnFilm Web-Page Cutout 2" />
+                                        <img className="image --film-two" src={film2} alt="OnFilm Web-Page Cutout 3" />
+                                        <img className="image --film-three" src={film3} alt="OnFilm Web-Page Cutout 4" />
+                                    </a>
+                                </div>
 
-                <div className="portfolio__project-card-container" >
-                    <div className="portfolio__project-card">
-                        <div className="portfolio__project-image-container" >
-                            <a href="https://onfilm.netlify.app/" target="_blank" rel='noreferrer'>
-                                <img className="image --film-zero" src={film} alt="OnFilm Web-Page Cutout 1" />
-                                <img className="image --film-one" src={film1} alt="OnFilm Web-Page Cutout 2" />
-                                <img className="image --film-two" src={film2} alt="OnFilm Web-Page Cutout 3" />
-                                <img className="image --film-three" src={film3} alt="OnFilm Web-Page Cutout 4" />
-                            </a>
-                        </div>
+                                <div className="portfolio__project-details movie background" />
+                                <div className="portfolio__project-details movie">
+                                    <h2 className="portfolio__project-details-title">OnFilm</h2>
+                                    <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs.</p>
+                                    <a href="https://github.com/PeterPTN/movieproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
+                                    <a href="https://onfilm.netlify.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew /> View Website </a>
+                                </div>
+                            </div>
 
-                        <div className="portfolio__project-details movie background" />
-                        <div className="portfolio__project-details movie">
-                            <h2 className="portfolio__project-details-title">OnFilm</h2>
-                            <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs.</p>
-                            <a href="https://github.com/PeterPTN/movieproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                            <a href="https://onfilm.netlify.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew /> View Website </a>
-                        </div>
+
+                            <div className="portfolio__project-card music">
+                                <div className="portfolio__project-image-container">
+                                    <a href="https://e-oke.adaptable.app/" target="_blank" rel='noreferrer'>
+                                        <img className="image --music-zero" src={M1} alt="E-oke Web-Page Cutout 1" />
+                                        <img className="image --music-one" src={M2} alt="E-oke Web-Page Cutout 2" />
+                                        <img className="image --music-two" src={M3} alt="E-oke Web-Page Cutout 3" />
+                                        <img className="image --music-three" src={M5} alt="E-oke Web-Page Cutout 4" />
+                                        <img className="image --music-four" src={M6} alt="E-oke Web-Page Cutout 5" />
+                                    </a>
+                                </div>
+
+                                <div className="portfolio__project-details music background" />
+                                <div className="portfolio__project-details music">
+                                    <h2 className="portfolio__project-details-title">E-Ōke</h2>
+                                    <p className="portfolio__project-details-description">A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.</p>
+                                    <a href="https://github.com/PeterPTN/karaokeproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
+                                    <a href="https://e-oke.adaptable.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
+                                    <p className="portfolio__project-details-modal">(Requires Spotify Premium)</p>
+                                </div>
+                            </div>
+
+                            <div className="portfolio__project-card machina">
+                                <div className="portfolio__project-image-container">
+                                    <a href="https://peterptn.github.io/machinaco/index.html" target="_blank" rel='noreferrer'>
+                                        <img className="image --machina-zero" src={MCAbout} alt="Machina Web-Page Cutout 1" />
+                                        <img className="image --machina-two" src={MCCards} alt="Machina Web-Page Cutout 3" />
+                                        <img className="image --machina-three" src={MCTitle} alt="Machina Web-Page Cutout 4" />
+                                        <img className="image --machina-four" src={MCCHero} alt="Machina Web-Page Cutout 5" />
+                                    </a>
+                                </div>
+
+                                <div className="portfolio__project-details machina background" />
+                                <div className="portfolio__project-details machina">
+                                    <h2 className="portfolio__project-details-title">Machina.co</h2>
+                                    <p className="portfolio__project-details-description">A simple mock company portfolio made with HTML, SASS and JS.</p>
+                                    <a href="https://github.com/PeterPTN/machinaco" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
+                                    <a href="https://peterptn.github.io/machinaco/index.html" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
+                                </div>
+                            </div>
+                        </>
                     </div>
+                    :
+                    <div className="portfolio__sideprojects-card-container">
+                        <a className="portfolio__sideprojects-card fakeos" href="https://peterptn.github.io/fakeOS/" target="_blank" rel='noreferrer'>
+                            <h2>fakeOS</h2>
+                            <p>A SPA made to replica a Windows 10 OS in terms of UI/UX. Made with HTML, SASS and JS.</p>
+                            <div className="portfolio__sideprojects-card-btns fakeos">
+                                <a href="https://github.com/PeterPTN/fakeOS" target="_blank" rel='noreferrer'>Source Code</a>
+                                <a href="https://peterptn.github.io/fakeOS/" target="_blank" rel='noreferrer'>View Live</a>
+                            </div>
+                        </a>
 
+                        <a className="portfolio__sideprojects-card" href="" target="_blank" rel='noreferrer'>
+                            <h2>Morse Code Translator</h2>
+                            <p>TBD</p>
+                            <div className="portfolio__sideprojects-card-btns">
+                                <a href="" target="_blank" rel='noreferrer'>Source Code</a>
+                                <a href="" target="_blank" rel='noreferrer'>View Live</a>
+                            </div>
+                        </a>
 
-                    <div className="portfolio__project-card music">
-                        <div className="portfolio__project-image-container">
-                            <a href="https://e-oke.adaptable.app/" target="_blank" rel='noreferrer'>
-                                <img className="image --music-zero" src={M1} alt="E-oke Web-Page Cutout 1" />
-                                <img className="image --music-one" src={M2} alt="E-oke Web-Page Cutout 2" />
-                                <img className="image --music-two" src={M3} alt="E-oke Web-Page Cutout 3" />
-                                <img className="image --music-three" src={M5} alt="E-oke Web-Page Cutout 4" />
-                                <img className="image --music-four" src={M6} alt="E-oke Web-Page Cutout 5" />
-                            </a>
-                        </div>
-
-                        <div className="portfolio__project-details music background" />
-                        <div className="portfolio__project-details music">
-                            <h2 className="portfolio__project-details-title">E-Ōke</h2>
-                            <p className="portfolio__project-details-description">A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.</p>
-                            <a href="https://github.com/PeterPTN/karaokeproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                            <a href="https://e-oke.adaptable.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
-                            <p className="portfolio__project-details-modal">(Requires Spotify Premium)</p>
-                        </div>
+                        <a className="portfolio__sideprojects-card" href="" target="_blank" rel='noreferrer'>
+                            <h2>TBD</h2>
+                            <p>TBD</p>
+                            <div className="portfolio__sideprojects-card-btns">
+                                <a href="" target="_blank" rel='noreferrer'>Source Code</a>
+                                <a href="" target="_blank" rel='noreferrer'>View Live</a>
+                            </div>
+                        </a>
                     </div>
-
-                    <div className="portfolio__project-card machina">
-                        <div className="portfolio__project-image-container">
-                            <a href="https://peterptn.github.io/machinaco/index.html" target="_blank" rel='noreferrer'>
-                                <img className="image --machina-zero" src={MCAbout} alt="Machina Web-Page Cutout 1" />
-                                <img className="image --machina-two" src={MCCards} alt="Machina Web-Page Cutout 3" />
-                                <img className="image --machina-three" src={MCTitle} alt="Machina Web-Page Cutout 4" />
-                                <img className="image --machina-four" src={MCCHero} alt="Machina Web-Page Cutout 5" />
-                            </a>
-                        </div>
-
-                        <div className="portfolio__project-details machina background" />
-                        <div className="portfolio__project-details machina">
-                            <h2 className="portfolio__project-details-title">Machina.co</h2>
-                            <p className="portfolio__project-details-description">A simple mock company portfolio made with HTML, SASS and JS.</p>
-                            <a href="https://github.com/PeterPTN/machinaco" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                            <a href="https://peterptn.github.io/machinaco/index.html" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
-                        </div>
-                    </div>
-                </div>
+                }
 
             </div>
         </div >
