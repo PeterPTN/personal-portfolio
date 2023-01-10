@@ -25,7 +25,7 @@ import MCCHero from "../../../images/machina/hero.png"
 const Content = () => {
     const [bookToggle, setBookToggle] = useState(false);
     const [milestoneToggle, setMilestoneToggle] = useState(false);
-    const [sideprojects, setSideprojects] = useState(true);
+    const [sideprojects, setSideprojects] = useState(false);
 
     return (
         <div className="portfolio__content-wrapper">
