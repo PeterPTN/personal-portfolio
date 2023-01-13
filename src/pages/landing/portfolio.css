@@ -709,6 +709,7 @@ ABOUT SECTION
 
 .portfolio__about-info.milestones>h4:active {
     box-shadow: 0px 0px 1rem rgb(167, 21, 21);
+    transform: scale(.95);
 }
 
 .portfolio__about-info.milestones ul {
@@ -821,7 +822,8 @@ ABOUT SECTION
 }
 
 .portfolio__about-info.books>svg:active {
-    outline-color: rgba(173, 49, 49)
+    outline-color: rgba(173, 49, 49);
+    transform: scale(.95);
 }
 
 @media (max-width: 1650px) {
@@ -1054,6 +1056,7 @@ PROJECTS
 
 .portfolio__projects-header>h2:last-child:active {
     filter: brightness(.5);
+    transform: scale(.95);
 }
 
 /* Side Projects */
@@ -1096,15 +1099,15 @@ PROJECTS
     text-shadow: 1px 1px 3px black;
 }
 
+.portfolio__sideprojects-card p:nth-child(3) {
+    filter: brightness(.7);
+}
+
 .portfolio__sideprojects-card>h2 {
     letter-spacing: .5px;
 }
 
-.portfolio__sideprojects-card.fakeos {
-    background: url("../../images/sideprojects/fakeos/fakeos.png");
-    background-position: left bottom;
-    background-repeat: no-repeat;
-}
+
 
 .portfolio__sideprojects-card-btns {
     margin-top: auto;
@@ -1121,7 +1124,7 @@ PROJECTS
     align-items: center;
     border-radius: 2rem;
     background-color: var(--red);
-    text-shadow: 0px 0px .5rem grey;
+    text-shadow: 0px 0px .2rem rgb(82, 82, 82);
 }
 
 .portfolio__sideprojects-card-btns>a:hover {
@@ -1129,11 +1132,37 @@ PROJECTS
 }
 
 .portfolio__sideprojects-card-btns>a:active {
-    filter: brightness(.9);
+    transform: scale(.95);
+}
+
+/* FakeOS */
+.portfolio__sideprojects-card.fakeos {
+    background: url("../../images/sideprojects/fakeos/fakeos.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
 }
 
 .portfolio__sideprojects-card-btns.fakeos>a {
     background-color: rgb(133, 194, 118);
+}
+
+/* Morse */
+.portfolio__sideprojects-card.morse {
+    background: url("../../images/sideprojects/morse/morse.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portfolio__sideprojects-card.morse :is(h2, p) {
+    color: rgb(164, 226, 64);
+    text-shadow: 0px 0px 4px black,
+    0px 0px .5rem rgba(36, 88, 31, 0.692),
+    0px 0px 1rem rgba(34, 63, 33, 0.692);
+}
+
+.portfolio__sideprojects-card-btns.morse>a {
+    background-color: rgb(71, 77, 100);
 }
 
 
