@@ -203,7 +203,7 @@ const Content = () => {
 
                         <a className="portfolio__sideprojects-card morse" href="https://peterptn.github.io/morsecode-translator/" target="_blank" rel='noreferrer'>
                             <h2>Morse Code Translator</h2>
-                            <p>A SPA designed to translate morsecode into English and vice-versa.</p>
+                            <p>A SPA designed to translate morsecode into English and vice-versa. Made with HTML, SASS and JS.<br></br> Includes unit testing.</p>
                             <div className="portfolio__sideprojects-card-btns morse">
                                 <a href="https://github.com/PeterPTN/morsecode-translator" target="_blank" rel='noreferrer'>Source Code</a>
                                 <a href="https://peterptn.github.io/morsecode-translator/" target="_blank" rel='noreferrer'>View Live</a>
