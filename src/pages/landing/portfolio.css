@@ -6,7 +6,7 @@ ALTERNATE HERO
 
 .portfolio__hero-wrapper {
     height: 930px;
-    width: 100%;
+    width: 1900px;
     margin: auto;
     padding: 3rem 6rem 4rem;
     perspective: 400px;
@@ -250,10 +250,24 @@ ALTERNATE HERO
     transform: skewX(-15deg);
 }
 
+@media screen and (max-width: 1900px) {
+    .portfolio__hero-wrapper {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width:1600px) {
     .portfolio__hero-wrapper {
         padding: 1rem 2rem 4rem;
         margin: none;
+    }
+
+    .portfolio__hero-top-row {
+        height: 45%;
+    }
+
+    .portfolio__hero-bottom-row {
+        height: 55%;
     }
 
     .portfolio__hero-bot-right {
@@ -341,6 +355,7 @@ ALTERNATE HERO
     }
 
     .nguyen {
+        margin-top: 1.5rem;
         margin-left: 7.5rem;
     }
 
