@@ -213,39 +213,9 @@ const Content = () => {
                     </div>
                     :
                     <div className="portfolio__sideprojects-card-container">
-                        <Sidecard content={fakeContent}/>
-                        <Sidecard content={morseContent}/>
-                        <Sidecard content={placeholderContent}/>
-
-                        {/* 
-                        <a className="portfolio__sideprojects-card fakeos" href="https://peterptn.github.io/fakeOS/" target="_blank" rel='noreferrer'>
-                            <h2>fakeOS</h2>
-                            <p>A SPA made to replica a Windows 10 OS in terms of UI/UX. Made with HTML, SASS and JS.</p>
-                            <p>Scripts undergoing refactor soon.</p>
-                            <div className="portfolio__sideprojects-card-btns fakeos">
-                                <a href="https://github.com/PeterPTN/fakeOS" target="_blank" rel='noreferrer'>Source Code</a>
-                                <a href="https://peterptn.github.io/fakeOS/" target="_blank" rel='noreferrer'>View Live</a>
-                            </div>
-                        </a>
-
-                        <a className="portfolio__sideprojects-card morse" href="https://peterptn.github.io/morsecode-translator/" target="_blank" rel='noreferrer'>
-                            <h2>Morse Code Translator</h2>
-                            <p>A SPA designed to translate morsecode into English and vice-versa. Made with HTML, SASS and JS.<br></br> Includes unit testing.</p>
-                            <div className="portfolio__sideprojects-card-btns morse">
-                                <a href="https://github.com/PeterPTN/morsecode-translator" target="_blank" rel='noreferrer'>Source Code</a>
-                                <a href="https://peterptn.github.io/morsecode-translator/" target="_blank" rel='noreferrer'>View Live</a>
-                            </div>
-                        </a>
-
-                        <a className="portfolio__sideprojects-card" href="" target="_blank" rel='noreferrer'>
-                            <h2>TBD</h2>
-                            <p>TBD</p>
-                            <div className="portfolio__sideprojects-card-btns">
-                                <a href="" target="_blank" rel='noreferrer'>Source Code</a>
-                                <a href="" target="_blank" rel='noreferrer'>View Live</a>
-                            </div>
-                        </a>
-                         */}
+                        <Sidecard content={fakeContent} />
+                        <Sidecard content={morseContent} />
+                        <Sidecard content={placeholderContent} />
                     </div>
                 }
             </div>
