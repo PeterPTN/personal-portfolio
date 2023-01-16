@@ -1,31 +1,112 @@
 import { useState } from 'react'
-import face2 from '../../../images/face2.jpg';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { IoLogoCodepen } from 'react-icons/io'
-import { MdOpenInNew } from "react-icons/md";
-import { RiFileTextLine } from "react-icons/ri";
 import { BsArrowReturnRight } from "react-icons/bs";
+import face2 from '../../../images/face2.jpg';
 
-import film from "../../../images/onfilmzoomed.png"
-import film1 from "../../../images/onfilmzoomed1.png"
-import film2 from "../../../images/onfilmzoomed2.png"
-import film3 from "../../../images/onfilmtitle.png"
+import film from "../../../images/onfilmzoomed.png";
+import film1 from "../../../images/onfilmzoomed1.png";
+import film2 from "../../../images/onfilmzoomed2.png";
+import film3 from "../../../images/onfilmtitle.png";
 
-import M1 from "../../../images/music/M1.png"
-import M2 from "../../../images/music/M2.png"
-import M3 from "../../../images/music/M3.png"
-import M5 from "../../../images/music/M5.png"
-import M6 from "../../../images/music/M6.png"
+import mu1 from "../../../images/music/M1.png";
+import mu2 from "../../../images/music/M2.png";
+import mu3 from "../../../images/music/M3.png";
+import mu4 from "../../../images/music/M5.png";
+import mu5 from "../../../images/music/M6.png";
 
-import MCAbout from "../../../images/machina/about.png"
-import MCCards from "../../../images/machina/cards.png"
-import MCTitle from "../../../images/machina/title.png"
-import MCCHero from "../../../images/machina/hero.png"
+import macAbout from "../../../images/machina/about.png";
+import macCards from "../../../images/machina/cards.png";
+import macTitle from "../../../images/machina/title.png";
+import macHero from "../../../images/machina/hero.png";
+
+import Maincard from '../../../component/Maincard';
+import Sidecard from '../../../component/Sidecard';
 
 const Content = () => {
     const [bookToggle, setBookToggle] = useState(false);
     const [milestoneToggle, setMilestoneToggle] = useState(false);
     const [sideprojects, setSideprojects] = useState(false);
+
+    // Name for className
+    const musicPics = [
+        { src: mu1, class: "--music-zero" },
+        { src: mu2, class: "--music-one" },
+        { src: mu3, class: "--music-two" },
+        { src: mu4, class: "--music-three" },
+        { src: mu5, class: "--music-four" }
+    ];
+
+    const machinaPics = [
+        { src: macAbout, class: "--machina-zero" },
+        { src: macCards, class: "--machina-one" },
+        { src: macTitle, class: "--machina-two" },
+        { src: macHero, class: "--machina-three" }
+    ];
+    const filmPics = [
+        { src: film, class: "--film-zero" },
+        { src: film1, class: "--film-one" },
+        { src: film2, class: "--film-two" },
+        { src: film3, class: "--film-three" }
+    ];
+
+    // Selected Works
+    const filmContent = {
+        images: filmPics,
+        details: {
+            class: "movie",
+            url: "https://onfilm.netlify.app/",
+            github: "https://github.com/PeterPTN/movieproject",
+            title: "OnFilm",
+            tag: "A film-database app made with ReactJS utilising Trakt & TMDb APIs.",
+        }
+    }
+
+    const musicContent = {
+        images: musicPics,
+        details: {
+            class: "music",
+            url: "https://e-oke.adaptable.app/",
+            github: "https://github.com/PeterPTN/karaokeproject",
+            title: "E-Ōke",
+            tag: `A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.`,
+            extra: "(Requires Spotify Premium)"
+        }
+    }
+
+    const machinaContent = {
+        images: machinaPics,
+        details: {
+            class: "machina",
+            url: "https://peterptn.github.io/machinaco/index.html",
+            github: "https://github.com/PeterPTN/machinaco",
+            title: "Machina.co",
+            tag: "A simple mock company portfolio made with HTML, SASS and JS."
+        }
+    }
+
+    // Side Projects
+    const fakeContent = {
+        title: "fakeOS",
+        tag: "A SPA made to replica a Windows 10 OS in terms of UI/UX. Made with HTML, SASS and JS.",
+        extra: "Scripts undergoing refactor soon.",
+        github: "https://github.com/PeterPTN/fakeOS",
+        url: "https://peterptn.github.io/fakeOS/",
+        class: "fakeos"
+    }
+
+    const morseContent = {
+        title: "Morse Code Translator",
+        tag: "A SPA designed to translate morsecode into English and vice-versa. Made with HTML, SASS and JS.<br></br> Includes unit testing.",
+        github: "https://github.com/PeterPTN/morsecode-translator",
+        url: "https://peterptn.github.io/morsecode-translator/",
+        class: "morse"
+    }
+
+    const placeholderContent = {
+        title: "TBD",
+        tag: "TBD"
+    }
 
     return (
         <div className="portfolio__content-wrapper">
@@ -51,7 +132,6 @@ const Content = () => {
                                 <img src={face2} alt="My face" />
                             </div>
                         </div>
-
 
                         <div className="portfolio__about-info-halves info">
                             <h2>About Me</h2>
@@ -127,70 +207,17 @@ const Content = () => {
                 </div>
                 {!sideprojects ?
                     <div className="portfolio__project-card-container" >
-                        <>
-                            < div className="portfolio__project-card">
-                                <div className="portfolio__project-image-container" >
-                                    <a href="https://onfilm.netlify.app/" target="_blank" rel='noreferrer'>
-                                        <img className="image --film-zero" src={film} alt="OnFilm Web-Page Cutout 1" />
-                                        <img className="image --film-one" src={film1} alt="OnFilm Web-Page Cutout 2" />
-                                        <img className="image --film-two" src={film2} alt="OnFilm Web-Page Cutout 3" />
-                                        <img className="image --film-three" src={film3} alt="OnFilm Web-Page Cutout 4" />
-                                    </a>
-                                </div>
-
-                                <div className="portfolio__project-details movie background" />
-                                <div className="portfolio__project-details movie">
-                                    <h2 className="portfolio__project-details-title">OnFilm</h2>
-                                    <p className="portfolio__project-details-description">A film-database app made with ReactJS utilising Trakt & TMDb APIs.</p>
-                                    <a href="https://github.com/PeterPTN/movieproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                                    <a href="https://onfilm.netlify.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew /> View Website </a>
-                                </div>
-                            </div>
-
-
-                            <div className="portfolio__project-card music">
-                                <div className="portfolio__project-image-container">
-                                    <a href="https://e-oke.adaptable.app/" target="_blank" rel='noreferrer'>
-                                        <img className="image --music-zero" src={M1} alt="E-oke Web-Page Cutout 1" />
-                                        <img className="image --music-one" src={M2} alt="E-oke Web-Page Cutout 2" />
-                                        <img className="image --music-two" src={M3} alt="E-oke Web-Page Cutout 3" />
-                                        <img className="image --music-three" src={M5} alt="E-oke Web-Page Cutout 4" />
-                                        <img className="image --music-four" src={M6} alt="E-oke Web-Page Cutout 5" />
-                                    </a>
-                                </div>
-
-                                <div className="portfolio__project-details music background" />
-                                <div className="portfolio__project-details music">
-                                    <h2 className="portfolio__project-details-title">E-Ōke</h2>
-                                    <p className="portfolio__project-details-description">A "karaoke" web-app made with ReactJS, Node/Express utilising Spotify's API.</p>
-                                    <a href="https://github.com/PeterPTN/karaokeproject" rel='noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                                    <a href="https://e-oke.adaptable.app/" rel='noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
-                                    <p className="portfolio__project-details-modal">(Requires Spotify Premium)</p>
-                                </div>
-                            </div>
-
-                            <div className="portfolio__project-card machina">
-                                <div className="portfolio__project-image-container">
-                                    <a href="https://peterptn.github.io/machinaco/index.html" target="_blank" rel='noreferrer'>
-                                        <img className="image --machina-zero" src={MCAbout} alt="Machina Web-Page Cutout 1" />
-                                        <img className="image --machina-two" src={MCCards} alt="Machina Web-Page Cutout 3" />
-                                        <img className="image --machina-three" src={MCTitle} alt="Machina Web-Page Cutout 4" />
-                                        <img className="image --machina-four" src={MCCHero} alt="Machina Web-Page Cutout 5" />
-                                    </a>
-                                </div>
-
-                                <div className="portfolio__project-details machina background" />
-                                <div className="portfolio__project-details machina">
-                                    <h2 className="portfolio__project-details-title">Machina.co</h2>
-                                    <p className="portfolio__project-details-description">A simple mock company portfolio made with HTML, SASS and JS.</p>
-                                    <a href="https://github.com/PeterPTN/machinaco" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-blog-link"><RiFileTextLine /> Source Code</a>
-                                    <a href="https://peterptn.github.io/machinaco/index.html" rel='noopener noreferrer' target="_blank" className="portfolio__project-details-website-link"><MdOpenInNew />View Website</a>
-                                </div>
-                            </div>
-                        </>
+                        <Maincard content={filmContent} />
+                        <Maincard content={musicContent} />
+                        <Maincard content={machinaContent} />
                     </div>
                     :
                     <div className="portfolio__sideprojects-card-container">
+                        <Sidecard content={fakeContent}/>
+                        <Sidecard content={morseContent}/>
+                        <Sidecard content={placeholderContent}/>
+
+                        {/* 
                         <a className="portfolio__sideprojects-card fakeos" href="https://peterptn.github.io/fakeOS/" target="_blank" rel='noreferrer'>
                             <h2>fakeOS</h2>
                             <p>A SPA made to replica a Windows 10 OS in terms of UI/UX. Made with HTML, SASS and JS.</p>
@@ -218,9 +245,9 @@ const Content = () => {
                                 <a href="" target="_blank" rel='noreferrer'>View Live</a>
                             </div>
                         </a>
+                         */}
                     </div>
                 }
-
             </div>
         </div >
     )

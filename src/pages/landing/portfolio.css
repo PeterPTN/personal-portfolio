@@ -1281,7 +1281,7 @@ PROJECTS
 
 
 /* Project Cards */
-.--machina-two {
+.--machina-one {
     z-index: 110;
     top: 5rem;
     right: -5rem;
@@ -1289,7 +1289,7 @@ PROJECTS
 }
 
 /* Machina Title */
-.--machina-three {
+.--machina-two {
     z-index: 120;
     right: 5rem;
     top: 2rem;
@@ -1297,7 +1297,7 @@ PROJECTS
 }
 
 /* Machina Hero */
-.--machina-four {
+.--machina-three {
     top: -2rem;
     left: -3rem;
     z-index: 100;
