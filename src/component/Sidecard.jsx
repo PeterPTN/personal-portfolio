@@ -1,6 +1,4 @@
 const Sidecard = ({ content }) => {
-    console.log(content);
-
     return (
         <a className={`portfolio__sideprojects-card ${content.class}`} href={content.url} target="_blank" rel='noreferrer'>
             <h2>{content.title}</h2>
