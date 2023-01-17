@@ -17,11 +17,10 @@ import macHero from "../images/machina/hero.png";
 export const mainProjects = [
     {
         images: [
-            { src: mu1, class: "--music-zero" },
-            { src: mu2, class: "--music-one" },
-            { src: mu3, class: "--music-two" },
-            { src: mu4, class: "--music-three" },
-            { src: mu5, class: "--music-four" }
+            { src: film, class: "--film-zero" },
+            { src: film1, class: "--film-one" },
+            { src: film2, class: "--film-two" },
+            { src: film3, class: "--film-three" }
         ],
         details: {
             class: "movie",
@@ -33,10 +32,11 @@ export const mainProjects = [
     },
     {
         images: [
-            { src: macAbout, class: "--machina-zero" },
-            { src: macCards, class: "--machina-one" },
-            { src: macTitle, class: "--machina-two" },
-            { src: macHero, class: "--machina-three" }
+            { src: mu1, class: "--music-zero" },
+            { src: mu2, class: "--music-one" },
+            { src: mu3, class: "--music-two" },
+            { src: mu4, class: "--music-three" },
+            { src: mu5, class: "--music-four" }
         ],
         details: {
             class: "music",
@@ -48,11 +48,12 @@ export const mainProjects = [
         }
     },
     {
+
         images: [
-            { src: film, class: "--film-zero" },
-            { src: film1, class: "--film-one" },
-            { src: film2, class: "--film-two" },
-            { src: film3, class: "--film-three" }
+            { src: macAbout, class: "--machina-zero" },
+            { src: macCards, class: "--machina-one" },
+            { src: macTitle, class: "--machina-two" },
+            { src: macHero, class: "--machina-three" }
         ],
         details: {
             class: "machina",
