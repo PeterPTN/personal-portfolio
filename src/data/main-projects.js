@@ -1,26 +1,12 @@
-import film from "../images/onfilmzoomed.png";
-import film1 from "../images/onfilmzoomed1.png";
-import film2 from "../images/onfilmzoomed2.png";
-import film3 from "../images/onfilmtitle.png";
-
-import mu1 from "../images/music/M1.png";
-import mu2 from "../images/music/M2.png";
-import mu3 from "../images/music/M3.png";
-import mu4 from "../images/music/M5.png";
-import mu5 from "../images/music/M6.png";
-
-import macAbout from "../images/machina/about.png";
-import macCards from "../images/machina/cards.png";
-import macTitle from "../images/machina/title.png";
-import macHero from "../images/machina/hero.png";
+import mainImages from "./main-images"
 
 export const mainProjects = [
     {
         images: [
-            { src: film, class: "--film-zero" },
-            { src: film1, class: "--film-one" },
-            { src: film2, class: "--film-two" },
-            { src: film3, class: "--film-three" }
+            { src: mainImages.film, class: "--film-zero" },
+            { src: mainImages.film1, class: "--film-one" },
+            { src: mainImages.film2, class: "--film-two" },
+            { src: mainImages.film3, class: "--film-three" }
         ],
         details: {
             class: "movie",
@@ -32,11 +18,11 @@ export const mainProjects = [
     },
     {
         images: [
-            { src: mu1, class: "--music-zero" },
-            { src: mu2, class: "--music-one" },
-            { src: mu3, class: "--music-two" },
-            { src: mu4, class: "--music-three" },
-            { src: mu5, class: "--music-four" }
+            { src: mainImages.mu1, class: "--music-zero" },
+            { src: mainImages.mu2, class: "--music-one" },
+            { src: mainImages.mu3, class: "--music-two" },
+            { src: mainImages.mu4, class: "--music-three" },
+            { src: mainImages.mu5, class: "--music-four" }
         ],
         details: {
             class: "music",
@@ -50,10 +36,10 @@ export const mainProjects = [
     {
 
         images: [
-            { src: macAbout, class: "--machina-zero" },
-            { src: macCards, class: "--machina-one" },
-            { src: macTitle, class: "--machina-two" },
-            { src: macHero, class: "--machina-three" }
+            { src: mainImages.macAbout, class: "--machina-zero" },
+            { src: mainImages.macCards, class: "--machina-one" },
+            { src: mainImages.macTitle, class: "--machina-two" },
+            { src: mainImages.macHero, class: "--machina-three" }
         ],
         details: {
             class: "machina",
