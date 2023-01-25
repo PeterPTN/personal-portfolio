@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { IoLogoCodepen } from 'react-icons/io'
 import { BsArrowReturnRight } from "react-icons/bs";
-import face2 from '../../../images/face2.jpg';
+import face2 from "../images/face2.jpg";
 
-import { mainProjects } from '../../../data/main-projects';
-import { sideProjects } from '../../../data/side-projects';
+import { mainProjects } from '../data/main-projects';
+import { sideProjects } from '../data/side-projects';
 
-import Maincard from '../../../component/Maincard';
-import Sidecard from '../../../component/Sidecard';
+import Maincard from '../components/Maincard';
+import Sidecard from '../components/Sidecard';
 
 const Content = () => {
     const [bookToggle, setBookToggle] = useState(false);
@@ -115,13 +115,13 @@ const Content = () => {
                 {!sideprojects ?
                     <div className="portfolio__project-card-container" >
                         {mainProjects.map((project) => (
-                            <Maincard content={project} />
+                            <Maincard key={project.id} content={project} />
                         ))}
                     </div>
                     :
                     <div className="portfolio__sideprojects-card-container">
                         {sideProjects.map((project) => (
-                            <Sidecard content={project} />
+                            <Sidecard key={project.id} content={project} />
                         ))}
                     </div>
                 }

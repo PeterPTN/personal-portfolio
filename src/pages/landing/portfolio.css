@@ -667,7 +667,7 @@ ABOUT SECTION
     display: flex;
 
     /* Control height of milestones content - jank af */
-    height: 70%;
+    height: fit-content;
 }
 
 /* Milestones */
@@ -856,6 +856,10 @@ ABOUT SECTION
 }
 
 @media (max-width: 1350px) {
+    .portfolio__content-container {
+        margin-bottom: 5em
+    }
+
     .portfolio__about-info.details>p {
         line-height: 1.75;
     }
@@ -882,10 +886,6 @@ ABOUT SECTION
     .portfolio__about-info-container.background,
     .portfolio__about-info-container.second-background {
         display: none;
-    }
-
-    .portfolio__about-info.milestones {
-        height: 14rem;
     }
 
     .portfolio__about-info.milestones {
@@ -965,6 +965,9 @@ ABOUT SECTION
 
 
 @media screen and (max-width: 650px) {
+    .portfolio__content-container {
+        margin-bottom: 0em
+    }
 
     .portfolio__about-info-halves.pic-container>img,
     .portfolio__about-social-container {
@@ -1022,8 +1025,12 @@ PROJECTS
     margin: 1rem 0;
 }
 
+
+
 .portfolio__projects-header>h2 {
     cursor: pointer;
+    text-align: center;
+
 }
 
 .portfolio__projects-header>h2:first-child {
@@ -1059,6 +1066,17 @@ PROJECTS
     transform: scale(.975);
 }
 
+@media screen and (max-width: 800px) {
+    .portfolio__projects-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio__projects-header>h2:first-child::after {
+        content: "";
+    }
+}
+
 /* Side Projects */
 .portfolio__sideprojects-card-container {
     display: grid;
@@ -1079,6 +1097,8 @@ PROJECTS
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
 
 .portfolio__sideprojects-card {
     display: flex;
@@ -1303,8 +1323,29 @@ PROJECTS
     z-index: 100;
 }
 
-.portfolio__project-card.music {
-    background-color: rgb(71, 40, 64);
+/* Keen Logo */
+.--book-zero {
+    z-index: 140;
+    top: 2em;
+    left: -15em;
+    transform: rotateZ(20deg);
+}
+
+.--book-one {
+    right: -15em;
+    top: -4em;
+    transform: rotateZ(-5deg);
+    z-index: 130;
+}
+
+.--book-two {
+    top: 0;
+    right: 30em;
+}
+
+.--book-three {
+    left: 10em;
+    z-index: 120;
 }
 
 .musicnote {
@@ -1334,8 +1375,6 @@ PROJECTS
 /* Movie Postit */
 .portfolio__project-details.movie {
     background: rgb(194, 97, 186);
-    border-right: 1px solid rgba(134, 47, 127, 0.158);
-    border-top: 1px solid rgba(134, 47, 127, 0.158);
     bottom: -4rem;
     left: 5rem;
     transform: rotateZ(3deg);
@@ -1364,8 +1403,6 @@ PROJECTS
 /* Music Postit */
 .portfolio__project-details.music {
     background: rgb(71, 224, 41);
-    border-right: 1px solid rgba(134, 47, 127, 0.158);
-    border-top: 1px solid rgba(134, 47, 127, 0.158);
     bottom: -2.15rem;
     right: 2rem;
     transform: rotateZ(-5deg);
@@ -1388,27 +1425,54 @@ PROJECTS
     color: rgb(192, 255, 195);
 }
 
-.portfolio__project-details.machina>a:hover {
-    background-color: rgb(156, 83, 15);
-    color: rgb(235, 226, 152);
-
-}
-
 /* Machina Postit */
 .portfolio__project-details.machina {
     background-color: orange;
+    box-shadow: 2px 2px 16px rgb(80, 80, 80);
+    transform: rotateZ(3deg);
 }
 
 .portfolio__project-details.machina.background {
-    background-color: rgb(233, 131, 6);
-    transform: rotateZ(3deg);
+    background-color: rgb(165, 94, 7);
+    transform: rotateZ(-1deg);
     height: 207px;
+    box-shadow: 2px 2px 5px rgb(63, 63, 63);
 }
 
 .portfolio__project-details.machina,
 .portfolio__project-details.machina.background {
     bottom: -2rem;
-    left: 1rem;
+    left: 2rem;
+}
+
+.portfolio__project-details.machina>a:hover {
+    background-color: rgb(156, 83, 15);
+    color: rgb(235, 226, 152);
+}
+
+/* Keen Postit */
+.portfolio__project-details.book {
+    background-color: rgb(130, 240, 255);
+    transform: rotateZ(1deg);
+    box-shadow: 2px 2px 16px rgb(80, 80, 80);
+}
+
+.portfolio__project-details.book.background {
+    background-color: rgb(39, 104, 129);
+    transform: rotateZ(-3deg);
+    height: 207px;
+    box-shadow: 2px 2px 5px rgb(63, 63, 63);
+}
+
+.portfolio__project-details.book,
+.portfolio__project-details.book.background {
+    bottom: -4rem;
+    right: 3rem;
+}
+
+.portfolio__project-details.book>a:hover {
+    background-color: rgb(66, 177, 192);
+    color: rgb(186, 245, 255);
 }
 
 /* General Details */
@@ -1425,7 +1489,6 @@ PROJECTS
 .portfolio__project-details-title {
     letter-spacing: -0.025em;
     font-weight: lighter;
-    /*border-bottom: 1px solid rgba(75, 72, 72, 0.144);*/
 }
 
 .portfolio__project-details>p {
@@ -1513,6 +1576,21 @@ PROJECTS
         transform: rotateZ(-10deg) scale(2);
     }
 
+    /* Keen Logo */
+    .--book-zero {
+        transform: scale(1.5) rotateZ(20deg);
+    }
+
+    /* Keen Breathe */
+    .--book-one {
+        transform: scale(1.5) rotateZ(-5deg);
+    }
+
+    /* Keen Description */
+    .--book-two {
+        left: 0;
+    }
+
     .portfolio__project-details.movie {
         left: 1rem;
     }
@@ -1541,6 +1619,24 @@ PROJECTS
 }
 
 @media screen and (max-width: 650px) {
+
+    /* Keen Logo */
+    .--book-zero {
+        transform: scale(2.5) rotateZ(20deg);
+        top: 15em;
+    }
+
+    /* Keen Breathe */
+    .--book-one {
+        transform: scale(2) rotateZ(-5deg);
+        top: 6em;
+    }
+
+    /* Keen Description */
+    .--book-two {
+        left: 0;
+    }
+
 
     /* E-Oke */
     .--music-four {
@@ -1581,6 +1677,33 @@ PROJECTS
         transform: rotateZ(10deg) scale(1.25);
     }
 
+    /* Machina About */
+    .--machina-zero {
+        left: 0;
+        top: 20em;
+        transform: scale(2.5);
+    }
+
+    /* Machina Card */
+    .--machina-two {
+        right: 0rem;
+        top: 25rem;
+    }
+
+    /* Machina Hero */
+    .--machina-three {
+        top: 5em;
+        left: -5em;
+        transform: scale(2.5) rotateZ(-20deg);
+    }
+
+    /* Machina Hero */
+    .--machina-four {
+        top: 25rem;
+        transform: rotateZ(-10deg) scale(2);
+    }
+
+
 }
 
 @media screen and (max-width: 500px) {
@@ -1597,6 +1720,12 @@ PROJECTS
 
     .portfolio__project-details.machina {
         width: 250px;
+    }
+
+    .portfolio__project-details.book,
+    .portfolio__project-details.book.background {
+        width: 250px;
+        right: 1em;
     }
 
     .portfolio__project-card {
@@ -1637,19 +1766,21 @@ PROJECTS
         width: 200px;
         bottom: -5rem;
         left: .5rem;
-        font-size: .8rem;
     }
 
     .portfolio__project-details.music {
         width: 200px;
     }
 
-    .portfolio__project-details.machina {
-        left: 0;
-    }
-
+    .portfolio__project-details.machina,
     .portfolio__project-details.machina.background {
         left: 0;
+        width: 200px;
+    }
+
+    .portfolio__project-details.book,
+    .portfolio__project-details.book.background {
+        width: 200px;
     }
 
     .--film-zero {
@@ -1692,6 +1823,7 @@ FOOTER
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .portfolio__footer-container li {

@@ -1,6 +1,6 @@
 import './portfolio.css';
-import Hero from './containers/Hero';
-import Content from './containers/Content';
+import Hero from '../../containers/Hero';
+import Content from '../../containers/Content';
 
 const Portfolio = () => {
   return (
