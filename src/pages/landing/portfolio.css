@@ -1076,7 +1076,7 @@ PROJECTS
 .portfolio__sideprojects-card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 5rem;
     margin-top: 3rem;
 
 }
