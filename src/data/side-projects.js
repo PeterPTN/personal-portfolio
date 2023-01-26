@@ -5,7 +5,6 @@ export const sideProjects = [
         id: ++counter,
         title: "fakeOS",
         tag: "A SPA made to replica a Windows 10 OS in terms of UI/UX. Made with HTML, SASS and JS.",
-        extra: "Scripts undergoing refactor soon.",
         github: "https://github.com/PeterPTN/fakeOS",
         url: "https://peterptn.github.io/fakeOS/",
         class: "fakeos"
@@ -23,7 +22,13 @@ export const sideProjects = [
         title: "Hangman",
         tag: "A SPA that mimics the classic word game Hangman! Made with React/TypeScript.",
         github: "https://github.com/PeterPTN/hangman",
-        url: "https://github.com/PeterPTN/hangman",
+        url: "hangman-wordgame.netlify.app",
         class: "hangman"
+    },
+    {
+        id: ++counter,
+        title: "TBD",
+        tag: "TBD",
+        class: ""
     }
 ]

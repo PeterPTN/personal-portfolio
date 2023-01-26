@@ -1080,16 +1080,10 @@ PROJECTS
 /* Side Projects */
 .portfolio__sideprojects-card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
 
-}
-
-@media screen and (max-width: 1650px) {
-    .portfolio__sideprojects-card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media screen and (max-width: 1350px) {
@@ -1098,7 +1092,7 @@ PROJECTS
     }
 }
 
-
+/* Sideprojects */
 
 .portfolio__sideprojects-card {
     display: flex;
@@ -1154,6 +1148,16 @@ PROJECTS
     transform: scale(.95);
 }
 
+.portfolio__sideprojects-card-header {
+    backdrop-filter: blur(10px);
+    border-radius: 2em;
+    padding: .25em;
+}
+
+.portfolio__sideprojects-card-header :is(h2, p) {
+    letter-spacing: .5px;
+}
+
 /* FakeOS */
 .portfolio__sideprojects-card.fakeos {
     background: url("../../images/sideprojects/fakeos/fakeos.png");
@@ -1174,11 +1178,27 @@ PROJECTS
 }
 
 .portfolio__sideprojects-card.morse :is(h2, p) {
-    color: rgb(218, 218, 218);
+    color: rgb(211, 218, 241);
 }
 
 .portfolio__sideprojects-card-btns.morse>a {
     background-color: rgb(71, 77, 100);
+}
+
+/* Hangman */
+.portfolio__sideprojects-card.hangman {
+    background: url("../../images/sideprojects/hangman/hangman.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portfolio__sideprojects-card.hangman :is(h2, p) {
+    color: rgb(233, 233, 233);
+}
+
+.portfolio__sideprojects-card-btns.hangman>a {
+    background-color: rgb(40, 41, 43);
 }
 
 
@@ -1452,14 +1472,14 @@ PROJECTS
 
 /* Keen Postit */
 .portfolio__project-details.book {
-    background-color: rgb(130, 240, 255);
-    transform: rotateZ(1deg);
+    background-color: rgb(130, 255, 245);
+    transform: rotateZ(-1deg);
     box-shadow: 2px 2px 16px rgb(80, 80, 80);
 }
 
 .portfolio__project-details.book.background {
-    background-color: rgb(39, 104, 129);
-    transform: rotateZ(-3deg);
+    background-color: rgb(39, 119, 129);
+    transform: rotateZ(2deg);
     height: 207px;
     box-shadow: 2px 2px 5px rgb(63, 63, 63);
 }
