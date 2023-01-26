@@ -623,7 +623,7 @@ ABOUT SECTION
     height: 100%;
     background-color: var(--black);
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     position: relative;
     box-shadow: -0rem -.15rem 1rem rgba(0, 0, 0, 0.274);
 }
@@ -661,32 +661,33 @@ ABOUT SECTION
 }
 
 .portfolio__about-info.milestones {
-    margin-left: 2.5rem;
     transform: rotateZ(.05deg);
-    position: relative;
     display: flex;
-
-    /* Control height of milestones content - jank af */
+    flex-direction: column;
     height: fit-content;
+    row-gap: 1em;
+    padding: 2em;
 }
 
+.portfolio__about-info.milestones-header {
+    display: flex;
+    column-gap: 1em;
+}
+
+
 /* Milestones */
-.portfolio__about-info.milestones>h3 {
+.portfolio__about-info.milestones-header>h3 {
     color: var(--black);
     background-color: var(--red);
     border: 1px solid rgb(187, 62, 62);
     transform: rotateZ(-1deg);
     box-shadow: 0px 0px .5rem rgba(0, 0, 0, 0.349);
     font-weight: lighter;
-    display: inline-flex;
-    position: absolute;
-    top: -3.15rem;
-    left: -.75rem;
     padding: .15rem .5rem;
 }
 
 /* More */
-.portfolio__about-info.milestones>h4 {
+.portfolio__about-info.milestones-header>h4 {
     padding: .15rem .5rem;
     background-color: var(--red);
     background-color: rgb(27, 27, 27);
@@ -694,9 +695,6 @@ ABOUT SECTION
     box-shadow: 0px 0px .5rem rgba(20, 20, 20, 0.473);
     letter-spacing: .5px;
     font-weight: normal;
-    position: absolute;
-    top: -2.9rem;
-    left: 6.5rem;
     font-size: 1.05rem;
     cursor: pointer;
     transition: all .15s;
@@ -888,9 +886,6 @@ ABOUT SECTION
         display: none;
     }
 
-    .portfolio__about-info.milestones {
-        padding: 2rem 0;
-    }
 
     .portfolio__about-info.milestones h3 {
         top: -1rem;

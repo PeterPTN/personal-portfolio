@@ -54,8 +54,10 @@ const Content = () => {
                             <div className="portfolio__about-info facts">
 
                                 <div className="portfolio__about-info milestones">
-                                    <h3>Milestones</h3>
-                                    <h4 onClick={() => setMilestoneToggle(!milestoneToggle)}>More &#8594;</h4>
+                                    <div className="portfolio__about-info milestones-header">
+                                        <h3>Milestones</h3>
+                                        <h4 onClick={() => setMilestoneToggle(!milestoneToggle)}>More &#8594;</h4>
+                                    </div>
 
                                     {!milestoneToggle ?
                                         <ul >
