@@ -22,7 +22,7 @@ export const sideProjects = [
         title: "Hangman",
         tag: "A SPA that mimics the classic word game Hangman! Made with React/TypeScript.",
         github: "https://github.com/PeterPTN/hangman",
-        url: "hangman-wordgame.netlify.app",
+        url: "https://hangman-wordgame.netlify.app/",
         class: "hangman"
     },
     {
