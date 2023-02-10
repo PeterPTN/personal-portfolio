@@ -10,7 +10,7 @@ const Portfolio = () => {
 
       <div className="portfolio__footer-container">
         <ul>
-          <li>&copy; 2022 Peter Nguyen</li>
+          <li>&copy; 2023 Peter Nguyen</li>
           <li><a href="mailto:peter.p.t.nguyen@gmail.com">Contact me</a></li>
         </ul>
       </div>
