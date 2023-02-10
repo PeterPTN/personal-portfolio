@@ -6,6 +6,21 @@ export const mainProjects = [
     {
         id: ++counter,
         images: [
+            { src: mainImages.ftb0, class: "--shop-zero" },
+            { src: mainImages.ftb1, class: "--shop-one" },
+            { src: mainImages.ftb2, class: "--shop-two" }
+        ],
+        details: {
+            class: "shop",
+            url: "https://menswear-ftb.netlify.app/",
+            github: "https://github.com/PeterPTN/e-shop",
+            title: "For The Boys",
+            tag: "An e-Shop SPA made with Vite/React/TypeScript and SASS - has CRUD functionality using Google's Firebase Firestore DB.",
+        }
+    },
+    {
+        id: ++counter,
+        images: [
             { src: mainImages.book0, class: "--book-zero" },
             { src: mainImages.book1, class: "--book-one" },
             { src: mainImages.book2, class: "--book-two" },
@@ -22,10 +37,10 @@ export const mainProjects = [
     {
         id: ++counter,
         images: [
-            { src: mainImages.film0, class: "--film-zero" },
-            { src: mainImages.film1, class: "--film-one" },
-            { src: mainImages.film2, class: "--film-two" },
-            { src: mainImages.film3, class: "--film-three" }
+            { src: mainImages.film0, class: "--movie-zero" },
+            { src: mainImages.film1, class: "--movie-one" },
+            { src: mainImages.film2, class: "--movie-two" },
+            { src: mainImages.film3, class: "--movie-three" }
         ],
         details: {
             class: "movie",
@@ -35,38 +50,7 @@ export const mainProjects = [
             tag: "A film SPA made with ReactJS utilising Trakt & TMDb APIs.",
         }
     },
-    {
-        id: ++counter,
-        images: [
-            { src: mainImages.music0, class: "--music-zero" },
-            { src: mainImages.music1, class: "--music-one" },
-            { src: mainImages.music2, class: "--music-two" },
-            { src: mainImages.music3, class: "--music-three" },
-            { src: mainImages.music4, class: "--music-four" }
-        ],
-        details: {
-            class: "music",
-            url: "https://e-oke.adaptable.app/",
-            github: "https://github.com/PeterPTN/karaokeproject",
-            title: "E-Ōke",
-            tag: `A "karaoke" SPA made with ReactJS, Node/Express utilising Spotify's API.`,
-            extra: "(Requires Spotify Premium)"
-        }
-    },
-    {
-        id: ++counter,
-        images: [
-            { src: mainImages.machina0, class: "--machina-zero" },
-            { src: mainImages.machina1, class: "--machina-one" },
-            { src: mainImages.machina2, class: "--machina-two" },
-            { src: mainImages.machina3, class: "--machina-three" }
-        ],
-        details: {
-            class: "machina",
-            url: "https://peterptn.github.io/machinaco/index.html",
-            github: "https://github.com/PeterPTN/machinaco",
-            title: "Machina.co",
-            tag: "A simple mock company portfolio made with HTML, SASS and JS."
-        }
-    },
+    /*
+
+    */
 ]

@@ -594,7 +594,6 @@ ABOUT SECTION
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(230, 230, 230, 0.979) 100%);
 }
 
-
 .portfolio__about-info-halves.info>h2 {
     color: var(--black);
     font-weight: lighter;
@@ -1087,7 +1086,7 @@ PROJECTS
 }
 
 @media screen and (max-width: 800px) {
-     .portfolio__sideprojects-card-container {
+    .portfolio__sideprojects-card-container {
         padding: 0;
     }
 }
@@ -1149,13 +1148,14 @@ PROJECTS
 }
 
 .portfolio__sideprojects-card-header {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border-radius: 2em;
     padding: .25em;
 }
 
 .portfolio__sideprojects-card-header :is(h2, p) {
     letter-spacing: .5px;
+
 }
 
 /* FakeOS */
@@ -1201,6 +1201,22 @@ PROJECTS
     background-color: rgb(40, 41, 43);
 }
 
+/* E-Oke */
+.portfolio__sideprojects-card.music {
+    background: url("../../images/sideprojects/music/eoke.png");
+    background-position: center;
+}
+
+.portfolio__sideprojects-card-btns.music>a {
+    background-color: #C789C4;
+    box-shadow: 0px 0px 8px rgb(0,0,0, .15);
+}
+
+/* Machina */
+.portfolio__sideprojects-card.machina {
+    background: url("../../images/sideprojects/machina/machina.png");
+    background-position: center;
+}
 
 /* Projects Card Container - Selected Works */
 .portfolio__project-card-container {
@@ -1226,11 +1242,6 @@ PROJECTS
     overflow: hidden;
 }
 
-/* Music Container */
-.portfolio__project-image-container>a {
-    perspective: 100px;
-}
-
 .image {
     position: absolute;
     box-shadow: 0px 0px 1rem rgba(49, 49, 49, 0.363);
@@ -1238,7 +1249,7 @@ PROJECTS
 }
 
 /* Popular */
-.--film-zero {
+.--movie-zero {
     right: 10rem;
     bottom: -35rem;
     transform: rotateZ(20deg);
@@ -1247,7 +1258,7 @@ PROJECTS
 }
 
 /* Trailer */
-.--film-one {
+.--movie-one {
     bottom: -5rem;
     transform: rotateZ(-10deg);
     z-index: 110;
@@ -1256,7 +1267,7 @@ PROJECTS
 }
 
 /* Movie Info */
-.--film-two {
+.--movie-two {
     bottom: -4rem;
     right: -1rem;
     z-index: 120;
@@ -1264,83 +1275,13 @@ PROJECTS
 }
 
 /* OnFilm */
-.--film-three {
+.--movie-three {
     top: 2rem;
     bottom: 0;
     left: 3rem;
     z-index: 130;
     box-shadow: 0px 0px 2rem rgba(24, 24, 24, 0.842);
     transform: rotateZ(-7.5deg) scale(1.25);
-}
-
-/* Search */
-.--music-zero {
-    bottom: -7rem;
-    left: -10rem;
-    z-index: 110;
-    transform: rotateZ(-5deg);
-}
-
-/* Playlist */
-.--music-one {
-    bottom: -3rem;
-    right: 20rem;
-    z-index: 90;
-    transform: rotateZ(3deg);
-}
-
-/* Lyrics (Beyonce) */
-.--music-two {
-    transform: scale(1.1);
-    top: 0rem;
-    right: 0rem;
-}
-
-/* Lyrics (Vince Staples) */
-.--music-three {
-    transform: scale(1.1) rotateZ(-10deg);
-    top: -2rem;
-    left: 20.5rem;
-    bottom: -5rem;
-    z-index: 100;
-}
-
-/* E-Oke */
-.--music-four {
-    top: 3rem;
-    left: 35%;
-    transform: scale(1) rotateY(1.5deg);
-    box-shadow: 0 0 1rem rgba(32, 32, 32, 0.979);
-    z-index: 200;
-}
-
-/* About */
-.--machina-zero {
-    right: 0;
-}
-
-
-/* Project Cards */
-.--machina-one {
-    z-index: 110;
-    top: 5rem;
-    right: -5rem;
-    transform: rotateZ(15deg);
-}
-
-/* Machina Title */
-.--machina-two {
-    z-index: 120;
-    right: 5rem;
-    top: 2rem;
-    transform: rotateZ(-4deg);
-}
-
-/* Machina Hero */
-.--machina-three {
-    top: -2rem;
-    left: -3rem;
-    z-index: 100;
 }
 
 /* Keen Logo */
@@ -1368,15 +1309,23 @@ PROJECTS
     z-index: 120;
 }
 
-.musicnote {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10rem;
-    margin: 0 auto;
-    font-size: 10rem;
-    color: white;
-    filter: drop-shadow(0px 0px 1rem rgba(255, 255, 255, 0.24));
+/* For The Boysd */
+.--shop-zero {
+    left: -15rem;
+    top: -2rem;
+    display: auto;
+    z-index: 150;
+    transform: scale(.5) rotate(2deg);
+    filter: brightness(1.1);
+}
+
+.--shop-one {}
+
+.--shop-two {
+    display: auto;
+    transform: rotate(-25deg);
+    right: -20rem;
+    z-index: 120;
 }
 
 .portfolio__project-details {
@@ -1420,56 +1369,6 @@ PROJECTS
     color: pink;
 }
 
-/* Music Postit */
-.portfolio__project-details.music {
-    background: rgb(71, 224, 41);
-    bottom: -2.15rem;
-    right: 2rem;
-    transform: rotateZ(-5deg);
-    box-shadow: 0 0 1rem rgb(43, 42, 42);
-}
-
-.portfolio__project-details.music.background {
-    transform: rotateZ(2deg);
-    height: 220px;
-    background: rgb(35, 151, 31);
-    box-shadow: 2px 2px 5px rgb(63, 63, 63);
-}
-
-.portfolio__project-details.music>a:last-child {
-    opacity: 1;
-}
-
-.portfolio__project-details.music>a:hover {
-    background-color: rgb(41, 151, 31);
-    color: rgb(192, 255, 195);
-}
-
-/* Machina Postit */
-.portfolio__project-details.machina {
-    background-color: orange;
-    box-shadow: 2px 2px 16px rgb(80, 80, 80);
-    transform: rotateZ(3deg);
-}
-
-.portfolio__project-details.machina.background {
-    background-color: rgb(165, 94, 7);
-    transform: rotateZ(-1deg);
-    height: 207px;
-    box-shadow: 2px 2px 5px rgb(63, 63, 63);
-}
-
-.portfolio__project-details.machina,
-.portfolio__project-details.machina.background {
-    bottom: -2rem;
-    left: 2rem;
-}
-
-.portfolio__project-details.machina>a:hover {
-    background-color: rgb(156, 83, 15);
-    color: rgb(235, 226, 152);
-}
-
 /* Keen Postit */
 .portfolio__project-details.book {
     background-color: rgb(130, 255, 245);
@@ -1493,6 +1392,31 @@ PROJECTS
 .portfolio__project-details.book>a:hover {
     background-color: rgb(66, 177, 192);
     color: rgb(186, 245, 255);
+}
+
+/* Shop Postit */
+.portfolio__project-details.shop {
+    background-color: rgb(236, 82, 82);
+    transform: rotateZ(2deg);
+    box-shadow: 2px 2px 16px rgb(80, 80, 80);
+}
+
+.portfolio__project-details.shop.background {
+    background-color: rgb(189, 66, 66);
+    transform: rotateZ(-2.5deg);
+    height: 207px;
+    box-shadow: 2px 2px 5px rgb(63, 63, 63);
+}
+
+.portfolio__project-details.shop,
+.portfolio__project-details.shop.background {
+    bottom: -4rem;
+    left: 2rem;
+}
+
+.portfolio__project-details.shop>a:hover {
+    background-color: rgb(145, 36, 36);
+    color: rgb(228, 151, 151);
 }
 
 /* General Details */
@@ -1528,26 +1452,29 @@ PROJECTS
 @media screen and (max-width: 1650px) {
 
     /* Popular */
-    .--film-zero {
+    .--movie-zero {
         right: 10rem;
         bottom: -22rem;
         transform: rotateZ(15deg);
     }
 
     /* Trailer */
-    .--film-one {
+    .--movie-one {
         bottom: 8rem;
         transform: rotateZ(2deg);
         left: -10rem;
     }
 
     /* Movie Info */
-    .--film-two {
+    .--movie-two {
         bottom: 0rem;
         right: -15rem;
         transform: rotateZ(1deg);
     }
 }
+
+
+
 
 @media screen and (max-width: 1350px) {
     .portfolio__about-info-container.main {
@@ -1559,41 +1486,23 @@ PROJECTS
     }
 
     /* Popular */
-    .--film-zero {
+    .--movie-zero {
         right: 7rem;
         bottom: -3rem;
         transform: rotateZ(20deg);
     }
 
     /* Trailer */
-    .--film-one {
+    .--movie-one {
         bottom: 18rem;
         left: -10rem;
     }
 
     /* Movie Info */
-    .--film-two {
+    .--movie-two {
         bottom: 0rem;
         right: -15rem;
         transform: rotateZ(1deg);
-    }
-
-    /* Machina About */
-    .--machina-zero {
-        left: 0;
-        transform: scale(2);
-    }
-
-    /* Machina Card */
-    .--machina-two {
-        right: -15rem;
-        top: 15rem;
-    }
-
-    /* Machina Hero */
-    .--machina-four {
-        top: 20rem;
-        transform: rotateZ(-10deg) scale(2);
     }
 
     /* Keen Logo */
@@ -1611,6 +1520,11 @@ PROJECTS
         left: 0;
     }
 
+    .--shop-zero {
+        left: -10rem;
+        top: -2rem;
+    }
+
     .portfolio__project-details.movie {
         left: 1rem;
     }
@@ -1620,22 +1534,51 @@ PROJECTS
     }
 }
 
+@media screen and (max-width: 1050px) {
+    .--shop-zero {
+        left: 0rem;
+        right: 0;
+        margin: 0 auto;
+        width: fit-content;
+        top: -2rem;
+    }
+
+    .--shop-one {
+        transform: scale(2.5);
+        bottom: 1rem;
+    }
+
+    .--shop-two {
+        transform: scale(1.5) rotate(-25deg);
+    }
+}
+
 @media screen and (max-width: 800px) {
     .portfolio__about-info-container.main {
         margin-bottom: 1rem;
     }
 
-    /* E-Oke */
-    .--music-four {
-        left: 10%;
-    }
-
     /* Popular */
-    .--film-zero {
+    .--movie-zero {
         right: 7rem;
         bottom: 3rem;
         transform: rotateZ(10deg);
     }
+
+    .--shop-zero { 
+        top: 2rem;
+        transform: scale(.75);
+    }
+
+    .--shop-one {
+        transform: scale(3.0);
+    }
+
+    .--shop-two {
+        transform: scale(2.5) rotate(-25deg);
+        right: -20rem;
+    }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -1657,72 +1600,34 @@ PROJECTS
         left: 0;
     }
 
-
-    /* E-Oke */
-    .--music-four {
-        top: 1rem;
-        left: 1rem;
-    }
-
-    /* Vince Staples */
-    .--music-three {
-        transform: scale(1.2) rotateZ(22deg);
-        top: 10rem;
-        left: 2rem;
-    }
-
-    /* Beyonce */
-    .--music-two {
-        bottom: 0;
-    }
-
     /* Popular */
-    .--film-zero {
+    .--movie-zero {
         right: 7rem;
         bottom: 5rem;
         transform: rotateZ(20deg) scale(1.5);
     }
 
     /* Trailer */
-    .--film-one {
+    .--movie-one {
         bottom: 17rem;
         left: -10rem;
         transform: rotateZ(-2deg) scale(2);
     }
 
     /* Movie Info */
-    .--film-two {
+    .--movie-two {
         bottom: -3rem;
         right: -10rem;
         transform: rotateZ(10deg) scale(1.25);
     }
 
-    /* Machina About */
-    .--machina-zero {
-        left: 0;
-        top: 20em;
-        transform: scale(2.5);
+    .--shop-zero {
+        transform: scale(2.0);
     }
 
-    /* Machina Card */
-    .--machina-two {
-        right: 0rem;
-        top: 25rem;
+    .--shop-one {
+        transform: scale(5.0);
     }
-
-    /* Machina Hero */
-    .--machina-three {
-        top: 5em;
-        left: -5em;
-        transform: scale(2.5) rotateZ(-20deg);
-    }
-
-    /* Machina Hero */
-    .--machina-four {
-        top: 25rem;
-        transform: rotateZ(-10deg) scale(2);
-    }
-
 
 }
 
@@ -1734,50 +1639,16 @@ PROJECTS
         font-size: .9rem;
     }
 
-    .portfolio__project-details.music {
-        width: 250px;
-    }
-
-    .portfolio__project-details.machina {
-        width: 250px;
-    }
-
     .portfolio__project-details.book,
-    .portfolio__project-details.book.background {
+    .portfolio__project-details.book.background,
+    .portfolio__project-details.shop,
+    .portfolio__project-details.shop.background {
         width: 250px;
         right: 1em;
     }
 
     .portfolio__project-card {
         margin-bottom: 3rem;
-    }
-
-    /* Playlist */
-    .--music-zero {
-        transform: scale(1.2) rotateZ(-35deg);
-        left: -10rem;
-    }
-
-    /* Beyonce */
-    .--music-two {
-        transform: scale(1.5);
-    }
-
-    /* Machina About */
-
-    .--machina-zero {
-        transform: scale(3.0);
-    }
-
-    /* Machina Title */
-    .--machina-three {
-        right: 2rem;
-    }
-
-    /* Machina Hero */
-    .--machina-four {
-        top: 15rem;
-        transform: rotateZ(-10deg) scale(2);
     }
 }
 
@@ -1788,14 +1659,9 @@ PROJECTS
         left: .5rem;
     }
 
-    .portfolio__project-details.music {
-        width: 200px;
-    }
-
-    .portfolio__project-details.machina,
-    .portfolio__project-details.machina.background {
+    .portfolio__project-details.shop,
+    .portfolio__project-details.shop.background {
         left: 0;
-        width: 200px;
     }
 
     .portfolio__project-details.book,
@@ -1803,29 +1669,24 @@ PROJECTS
         width: 200px;
     }
 
-    .--film-zero {
+    .--movie-zero {
         right: 7rem;
         bottom: 5rem;
         transform: rotateZ(20deg) scale(3);
     }
 
     /* Trailer */
-    .--film-one {
+    .--movie-one {
         bottom: 17rem;
         left: -10rem;
         transform: rotateZ(-2deg) scale(3);
     }
 
     /* Movie Info */
-    .--film-two {
+    .--movie-two {
         bottom: -3rem;
         right: -12rem;
         transform: rotateZ(10deg) scale(2);
-    }
-
-    /* Machina Title */
-    .--machina-three {
-        right: 0rem;
     }
 }
 
