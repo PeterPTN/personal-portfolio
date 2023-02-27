@@ -48,7 +48,7 @@ const Content = () => {
                                     I began re-training in software development the summer of 2021 after a brief stint in primary-teaching and in other odd jobs. </p>
                                 <p>Since then, I've dedicated most of my freetime to learning how to create web applications. I code mainly in
                                     <span className="html stack">HTML</span>, <span className="css stack">CSS</span>, <span className="js stack">JS</span>, <span className="react stack">ReactJS</span>, 
-                                    <span className="typescript stack">TypeScript</span> and more recently and <span className="java stack">Java</span>, 
+                                    <span className="typescript stack">TypeScript</span> and more recently <span className="java stack">Java</span>, 
                                     <span className="spring stack">Springboot</span> and <span className="nest stack">NestJS</span>
                                     . Below you'll find some milestones I've hit and projects I've made.</p>
                             </div>
