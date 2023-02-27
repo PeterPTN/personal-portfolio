@@ -369,6 +369,13 @@ ALTERNATE HERO
 
 }
 
+@media screen and (max-width:850px) {
+    .peter {
+        margin-left: 5rem;
+    }
+ }
+
+
 @media screen and (max-width:700px) {
     .nguyen {
         margin: 0;
@@ -378,6 +385,7 @@ ALTERNATE HERO
 
     .peter {
         font-size: 16vw;
+        margin-left: 0;
     }
 
     .lantern-container {
@@ -627,36 +635,43 @@ ABOUT SECTION
     box-shadow: -0rem -.15rem 1rem rgba(0, 0, 0, 0.274);
 }
 
+.stack {
+    padding: .05rem .15rem;
+
+}
+
 .html {
     background-color: rgb(255, 115, 0);
-    padding: .05rem .15rem;
     margin-left: .15rem;
 }
 
 .css {
     background-color: rgb(91, 149, 224);
-    padding: .05rem .15rem;
 }
 
 .js {
     background-color: rgb(247, 231, 18);
-    padding: .05rem .15rem;
 }
 
 .react {
     background-color: rgb(114, 224, 228);
-    padding: .05rem .15rem;
 }
 
 .typescript {
     background-color: #234d79dc;
-    padding: .05rem .15rem;
     color: rgb(17, 17, 17);
 }
 
 .java {
     background-color: #eb0b0bcc;
-    padding: .05rem .15rem;
+}
+
+.spring {
+    background-color: greenyellow;
+}
+
+.nest {
+    background-color: rgb(255, 112, 248);
 }
 
 .portfolio__about-info.milestones {
@@ -752,7 +767,7 @@ ABOUT SECTION
     font-size: 1rem;
 }
 
-.headfirst::after {
+.headFirstJs::after {
     content: " ✓";
     color: rgb(2, 110, 2);
     font-size: 1rem;
@@ -777,6 +792,12 @@ ABOUT SECTION
 }
 
 .artOf::after {
+    content: " —";
+    color: rgb(214, 115, 34);
+    font-size: 1rem;
+}
+
+.headFirstJava::after {
     content: " —";
     color: rgb(214, 115, 34);
     font-size: 1rem;

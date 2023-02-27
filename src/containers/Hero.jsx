@@ -40,7 +40,7 @@ const Hero = () => {
 
                 <p className="scroll">Scroll to see more</p>
 
-                <h2 className="front-end">Front-end Web Developer</h2>
+                <h2 className="front-end">Jnr. Software Developer</h2>
 
             </div>
         </div >

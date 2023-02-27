@@ -44,10 +44,12 @@ const Content = () => {
                             <h2>About Me</h2>
 
                             <div className="portfolio__about-info details">
-                                <p>Hi, my name is Peter Nguyen. I'm (primarily) a self-taught front-end web developer from Sydney.
-                                    I began re-training in web development the summer of 2021 after a brief stint in primary-teaching and in other odd jobs. </p>
+                                <p>Hi, my name is Peter Nguyen. I'm (primarily) a self-taught software developer from Sydney.
+                                    I began re-training in software development the summer of 2021 after a brief stint in primary-teaching and in other odd jobs. </p>
                                 <p>Since then, I've dedicated most of my freetime to learning how to create web applications. I code mainly in
-                                    <span className="html">HTML</span>, <span className="css">CSS</span>, <span className="js">JS</span>, <span className="react">ReactJS</span> and more recently <span className="typescript">TypeScript</span> and <span className="java">Java</span>
+                                    <span className="html stack">HTML</span>, <span className="css stack">CSS</span>, <span className="js stack">JS</span>, <span className="react stack">ReactJS</span>, 
+                                    <span className="typescript stack">TypeScript</span> and more recently and <span className="java stack">Java</span>, 
+                                    <span className="spring stack">Springboot</span> and <span className="nest stack">NestJS</span>
                                     . Below you'll find some milestones I've hit and projects I've made.</p>
                             </div>
 
@@ -61,15 +63,15 @@ const Content = () => {
 
                                     {!milestoneToggle ?
                                         <ul >
+                                            <li>_nology Software Engineer Course</li>
                                             <li>Certificate IV in IT (Web Development)</li>
                                             <li>FreeCodeCamp - Responsive Web Design Certificate</li>
                                             <li>FreeCodeCamp - JavaScript Certificate</li>
                                             <li>FreeCodeCamp - ReactJS Module</li>
-                                            <li>CodeAcademy - Java Course</li>
                                         </ul>
                                         :
                                         <ul>
-                                            <li>_nology Software Engineer Course (ongoing)</li>
+                                            <li>CodeAcademy - Java Course</li>
                                         </ul>
                                     }
                                 </div>
@@ -81,14 +83,15 @@ const Content = () => {
                                         ?
                                         <ul>
                                             <li className="cssInDepth">CSS in Depth (2018, Keith J. Grant)</li>
-                                            <li className="headfirst">Headfirst JavaScript Programming (2015, Elizabeth Robson et al.)</li>
-                                            <li className="reactQuicky">React Quickly (2022, Azat Mardan)</li>
+                                            <li className="headFirstJs">Headfirst JavaScript Programming (2015, Elizabeth Robson et al.)</li>
+                                            <li className="reactQuickly">React Quickly (2022, Azat Mardan)</li>
                                             <li className="design">Design of Everyday Things (2013, Don Norman)</li>
                                             <li className="dontKnow">You Don't Know JavaScript Yet (2020, Kyle Simpson)</li>
                                         </ul>
                                         :
                                         <ul>
                                             <li className="artOf">The Art of Computer Programming Vol. 1 (1997, Donald E. Knuth)</li>
+                                            <li className="headFirstJava">Headfirst Java Programming (2022, Kathy Sierra et al.)</li>
                                         </ul>
                                     }
 
